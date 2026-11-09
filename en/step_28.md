@@ -18,4 +18,4 @@ Keep `broadcast (start)`{:class="block3events"} after the final glide. Tofu must
 
 ## Now run your code
 
-Click the green flag and press space. Tofu wakes, waves, waddles and jumps into the river. The arrow keys work once the jump finishes.
+Click the green flag, wait for the four breaths, then press space. Tofu wakes, waves, waddles and jumps into the river. The arrow keys work once the jump finishes.

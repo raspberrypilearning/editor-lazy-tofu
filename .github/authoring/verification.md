@@ -5,7 +5,7 @@ Checked on 9 November 2026. This is a source and Scratch-runtime check, not acce
 ## Content and assets
 
 - All 33 page headings match the ordered titles in `en/meta.yml`.
-- All 39 `blocks3` examples parse and render with scratchblocks 3.7.1 without unrecognised blocks.
+- All 38 current `blocks3` examples parse with scratchblocks 3.7.1 without unrecognised blocks.
 - Both editor configurations use `code_editor_scratch`, matching directory, identifier and SB3 names, with `build: true`.
 - `listed` remains `false`.
 - The supplied starter has all seven sprites and the Stage, zero blocks, and no lists, messages or monitors. Its default `my variable` variable and saved sprite properties are retained unchanged.
@@ -18,13 +18,12 @@ Original supplied archive: `Lazy Tofu!.sb3`.
 
 Original SHA-256: `6c98ea9570c14e5c3f6cf7ae9c3b2c949332aa3a65f87abab63af221a468ee7c`.
 
-## Runtime checks passed
+## Earlier runtime checks
 
 The starter and completed project were opened in headless Chrome using Scratch VM 5.0.300, the Scratch renderer, SVG bitmap adapter and audio engine.
 
 - All 11 sound assignments decoded into audio players.
 - Green flag resets speed, score and health, and waits for Tofu to wake before starting scenery and collision checks.
-- A 100 ms space-key press is remembered while Tofu finishes breathing.
 - Sleeping, waking, waving, running, jumping and splash costumes appear in the opening, followed by the game starting in the river.
 - Tree clones use x `-180` and `180`; grass clones use the correct left- and right-bank ranges.
 - Both arrow keys move and flip Tofu. The swimming costume and size return to rest after release.
@@ -60,4 +59,16 @@ The site rejected the initial imports with `Expected a file or directory at auth
 
 Authoring notes and the preparation script were moved into the existing `.github/authoring/` area so the importer only sees `en` as project content. `listed: false` and both `build: true` settings are retained. A GitHub push alone is not proof of a successful site import.
 
-The repository contains a complete first draft. The manual checks above remain before learner acceptance or publication.
+## Four-breath sleeping-animation update
+
+Mark supplied `Lazy Tofu! (1).sb3` and updated the shared Scratch project on 9 November 2026. The source uses four complete breathing cycles, followed by `wait until <key (space) pressed?>` outside the loop. The instructions and completed archives now match this sequence; the temporary `awake` variable and keypress script are removed.
+
+Updated source SHA-256: `6cf90e012f6daf5e9c365966f2d728f8f8444431a8d225fc9e338cf10f05d703`.
+
+Updated completed archive SHA-256: `d96dc390cee7509de5f80f4d896e00fcfbde49096b974382260e310ec114c029` (258 blocks). The starter is unchanged.
+
+A focused Scratch VM logic check confirmed exactly 40 growth and 40 shrink changes across four cycles, no early start from a released keypress during breathing, a persistent space-key wait afterwards, and the full wave/waddle/jump/splash before the river starts. Restarting restores the sleeping state and removes old clones. This check did not render images or play audio; the asset bytes and costume/sound records are preserved.
+
+Both guides use “add the sleeping animation” rather than “add the nap”. The current editor guide has 38 code examples; all parse without unrecognised blocks.
+
+The manual checks above remain before full learner acceptance.

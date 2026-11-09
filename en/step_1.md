@@ -2,7 +2,7 @@
 
 The starter project is open beside these instructions. It has all the sprites, costumes, backdrop and sounds you need, with empty code areas ready for your blocks.
 
-You'll start by getting Tofu swimming. Later, you'll add the nap and the jump into the river.
+You'll start by getting Tofu swimming. Later, you'll add the sleeping animation and the jump into the river.
 
 Click on the `Tofu`{:class="block3looks"} sprite.
 

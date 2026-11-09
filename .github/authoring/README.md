@@ -15,7 +15,7 @@ These decisions came from the project brief and discussion with Mark. The suppli
 
 ## Source and project files
 
-The completed project is based on the supplied `Lazy Tofu!.sb3`. The starter is Mark's subsequently supplied `editor-lazy-tofu-starter.sb3`, copied byte-for-byte, including its saved sprite properties and default `my variable` variable.
+The completed project is based on Mark's updated `Lazy Tofu! (1).sb3`, with four breathing cycles followed by a space-key wait. The starter is the supplied `editor-lazy-tofu-starter.sb3`, copied byte-for-byte, including its saved sprite properties and default `my variable` variable.
 
 The editor project identifiers, code folders and SB3 filenames are `editor-lazy-tofu-starter` and `editor-lazy-tofu-complete`. Both `project_config.yml` files use `type: 'code_editor_scratch'` and `build: true`.
 
@@ -28,7 +28,7 @@ The completed project keeps the source gameplay and animations, with these corre
 - Set `speed` to `1` on the green flag, rather than relying on the saved variable value.
 - Start the health check on the `start` message, after the Stage has reset health.
 - Reset Tofu's visibility and rotation style at the beginning, so restarting during an animation works consistently.
-- Remember a space-key press in Tofu's local `awake` variable. The source only checks the key between complete breaths and can miss a brief press. Tofu still finishes the full breathing cycle before waking.
+- Keep Mark's updated sleeping sequence: `repeat (4)` around the breathing animation, then `wait until <key (space) pressed?>` outside the loop. The earlier `awake` variable and keypress script are removed.
 - Delete grass clones above y `180`, matching the other scenery, instead of `190`. At the supplied size, Scratch's sprite fencing stops grass reaching `190`, so the source can accumulate clones at the top edge.
 - Set the speed slider's minimum to `1`, because clone intervals divide by speed.
 - Write the water and object random x ranges in ascending order, `-180` to `180`. This chooses the same positions as the reversed ranges in the source.
@@ -38,7 +38,7 @@ The unused `tofu-hurt` costume and duplicate sound assignments are retained. Cos
 To rebuild from the original supplied file:
 
 ```sh
-python3 .github/authoring/prepare_projects.py '/path/to/Lazy Tofu!.sb3'
+python3 .github/authoring/prepare_projects.py '/path/to/Lazy Tofu! (1).sb3'
 ```
 
 With no argument, the script uses the committed completed project as its input. The setup changes are idempotent. It never generates a replacement starter from the completed project.

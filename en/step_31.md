@@ -13,4 +13,4 @@ This sound can run alongside Tofu's opening script and the background music.
 
 ## Now run your code
 
-Click the green flag and press space. The squeak plays as Tofu wakes. You can press space during the game too.
+Click the green flag, wait for the four breaths, then press space. The squeak plays as Tofu wakes. You can press space during the game too.

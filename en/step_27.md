@@ -25,4 +25,4 @@ The two turns balance each other, just as the two size changes did in the breath
 
 ## Now run your code
 
-Click the green flag and press space. Tofu waves, waddles down the bank, then appears in the river to begin swimming.
+Click the green flag, wait for the four breaths, then press space. Tofu waves, waddles down the bank, then appears in the river to begin swimming.

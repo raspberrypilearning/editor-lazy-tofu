@@ -1,6 +1,6 @@
 ## Let Tofu sleep
 
-The game works. Now give Tofu a nap on the bank before the swimming begins.
+The game works. Now add Tofu's sleeping animation on the bank before the swimming begins.
 
 The `start` message already starts the movement, scenery and collision checks. You'll have Tofu send it after waking, instead of the Stage sending it straight away.
 
@@ -17,20 +17,11 @@ set [health v] to (3)
 
 ## Step 2
 
-Click on `Tofu`{:class="block3looks"}. Make a variable called `awake`{:class="block3variables"}, **For this sprite only**, and untick its checkbox.
-
-Use `0` for asleep and `1` for awake. Add a separate key-press script to remember when the player presses space:
-
-```blocks3
-when [space v] key pressed
-set [awake v] to (1)
-```
-
-Find Tofu's green-flag starting-position script.
+Click on `Tofu`{:class="block3looks"} and find the green-flag starting-position script.
 
 Change the position to `x: -197, y: 107` and the costume to `tofu-sleeping`.
 
-Set `awake`{:class="block3variables"} to `0` at the start. At the end, wait until `awake`{:class="block3variables"} is `1`, go to `0, 0`, then broadcast `start`.
+At the end, wait until the space key is pressed, go to `0, 0`, then broadcast `start`.
 
 ```blocks3
 when green flag clicked
@@ -39,9 +30,8 @@ set size to (23) %
 point in direction (90)
 set rotation style [left-right v]
 show
-set [awake v] to (0)
 switch costume to (tofu-sleeping v)
-wait until <(awake) = (1)>
+wait until <key (space v) pressed?>
 go to x: (0) y: (0)
 broadcast (start v)
 ```

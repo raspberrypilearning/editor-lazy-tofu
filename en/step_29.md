@@ -18,6 +18,6 @@ The movement script chooses Tofu's next costume once it receives `start`.
 
 ## Now run your code
 
-Click the green flag and watch the full opening. Press space to wake Tofu up, then wait for the splash to finish before swimming for food.
+Click the green flag and watch the full opening. After Tofu's four breaths, press space to wake up. Wait for the splash to finish before swimming for food.
 
 Try restarting during the animation too. Tofu should return to the sleeping position and size.
