@@ -1,45 +1,42 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+## Make Tofu move
 
-A brief description - one or two sentences. 
+The starter project is open beside these instructions. It has all the sprites, costumes, backdrop and sounds you need, with empty code areas ready for your blocks.
 
---- print-only ---
+You'll start by getting Tofu swimming. Later, you'll add the nap and the jump into the river.
 
-![ALT TEXT](images/IMAGE.png)
+Click on the `Tofu`{:class="block3looks"} sprite.
 
---- /print-only ---
+## Step 1
 
---- no-print ---
+Make Tofu start in the middle of the river. Set the size, direction and costume so each new game starts the same way.
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+```blocks3
+when green flag clicked
+go to x: (0) y: (0)
+set size to (23) %
+point in direction (90)
+set rotation style [left-right v]
+show
+switch costume to (tofu v)
+```
 
---- /no-print ---
+## Step 2
 
---- no-print ---
+Add another `when green flag clicked`{:class="block3events"} block and a `forever`{:class="block3control"} loop.
 
-Video embed
+Inside the loop, check whether the left arrow key is pressed. A negative change in x moves Tofu left.
 
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
+```blocks3
+when green flag clicked
+forever
+if <key (left arrow v) pressed?> then
+change x by (-10)
+end
+end
+```
 
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
+## Now run your code
 
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
-</div>
+Click the green flag and press the left arrow. Tofu moves left.
 
---- /no-print ---
-
-### You will need:
-- a
-- b
-- c
+Click the green flag again to return Tofu to the middle.

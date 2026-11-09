@@ -1,14 +1,47 @@
-title: Project title in sentence case
+title: Lazy Tofu!
 hero_image: images/banner.png
-description: A short description of the project
+description: Code a river game where Tofu swims for food and dodges trees and rubbish.
 listed: false
 pdf: false
+landing: true
 steps:
-  - title: What you will make
-  - title: Step title
+  - title: Make Tofu move
+  - title: Swim both ways
     completion:
-      - engaged      
-  - title: Challenge
+      - engaged
+  - title: Change Tofu's costume
+  - title: Add a swimming splash
+  - title: Set the river speed
+  - title: Grow trees on the left bank
+  - title: Move the tree clones
+  - title: Vary the trees
+  - title: Grow trees on the right bank
+  - title: Grow grass on the left bank
+  - title: Grow grass on the right bank
+  - title: Add river ripples
+  - title: Choose the ripple costume
+  - title: Make the ripples pulse
+  - title: Float food and rubbish
+  - title: Make the objects bob
+  - title: Set up score and health
+  - title: Collect food
+  - title: Dodge the rubbish
+  - title: Crash into a tree
+  - title: Check both banks
+  - title: End the game
+  - title: Let Tofu sleep
+  - title: Make sleeping Tofu breathe
+  - title: Add snoring
+  - title: Wake up and wave
+  - title: Waddle towards the river
+  - title: Jump into the water
+  - title: Make a splash
+  - title: Add river music
+  - title: Make the space bar squeak
+  - title: Choose your river speed
+    completion:
+      - internal
+  - title: Make it your own
     challenge: true
     completion:
       - external
