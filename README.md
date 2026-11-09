@@ -11,7 +11,7 @@ The starter supplies all seven sprites with empty code areas, plus every costume
 The tutorial builds a playable game first, then adds the complete sleeping, waking, walking, jumping and splash sequence.
 
 ## Resources
-See [the English tutorial](en/meta.yml), [starter project](en/code/lazy-tofu-starter), [completed project](en/code/lazy-tofu-complete), [offline resources](en/resources) and [solution](en/solutions).
+See [the English tutorial](en/meta.yml), [starter project](en/code/editor-lazy-tofu-starter), [completed project](en/code/editor-lazy-tofu-complete), [offline resources](en/resources) and [solution](en/solutions).
 
 Authoring decisions, source preservation and verification notes are in [authoring/README.md](authoring/README.md).
 

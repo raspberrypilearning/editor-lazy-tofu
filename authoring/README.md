@@ -15,7 +15,11 @@ These decisions came from the project brief and discussion with Mark. The suppli
 
 ## Source and project files
 
-The supplied source is `Lazy Tofu!.sb3`. `scripts/prepare_projects.py` preserves all costume and sound records and every asset byte. It creates the editor starter, completed project, offline starter and downloadable solution.
+The completed project is based on the supplied `Lazy Tofu!.sb3`. The starter is Mark's subsequently supplied `editor-lazy-tofu-starter.sb3`, copied byte-for-byte, including its saved sprite properties and default `my variable` variable.
+
+The editor project identifiers, code folders and SB3 filenames are `editor-lazy-tofu-starter` and `editor-lazy-tofu-complete`. Both `project_config.yml` files use `type: 'code_editor_scratch'` and `build: true`.
+
+`scripts/prepare_projects.py` preserves all costume and sound records and every asset byte in the completed project. It keeps the supplied starter unchanged and synchronises the offline starter and downloadable solution.
 
 The completed project keeps the source gameplay and animations, with these corrections:
 
@@ -35,7 +39,13 @@ To rebuild from the original supplied file:
 python3 scripts/prepare_projects.py '/path/to/Lazy Tofu!.sb3'
 ```
 
-With no argument, the script uses the committed completed project as its input. The setup changes are idempotent.
+With no argument, the script uses the committed completed project as its input. The setup changes are idempotent. It never generates a replacement starter from the completed project.
+
+To import an updated supplied starter while rebuilding:
+
+```sh
+python3 scripts/prepare_projects.py --starter '/path/to/editor-lazy-tofu-starter.sb3'
+```
 
 ## Tutorial sequence
 

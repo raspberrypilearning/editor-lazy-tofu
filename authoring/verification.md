@@ -8,7 +8,7 @@ Checked on 9 November 2026. This is a source and Scratch-runtime check, not acce
 - All 39 `blocks3` examples parse and render with scratchblocks 3.7.1 without unrecognised blocks.
 - Both editor configurations use `code_editor_scratch`, matching directory, identifier and SB3 names, with `build: true`.
 - `listed` remains `false`.
-- The starter has all seven sprites and the Stage, zero blocks, and no pre-created variables, lists, messages or monitors.
+- The supplied starter has all seven sprites and the Stage, zero blocks, and no lists, messages or monitors. Its default `my variable` variable and saved sprite properties are retained unchanged.
 - Both projects preserve all 31 costume/backdrop records, 11 sound assignments and 33 unique asset files from the supplied source. Every asset byte and the costume order were compared with the original archive.
 - Offline starter and downloadable solution are byte-identical to their editor counterparts.
 - The preparation script can rebuild from either the original or the completed project without changing the generated project bytes.
@@ -44,4 +44,14 @@ The starter and completed project were opened in headless Chrome using Scratch V
 - Listen to the full mix on a learner device. Successful decoding is not a listening test.
 - Add a playable landing-page preview after confirming the completed editor project's preview URL.
 
-The repository contains a complete first draft. These checks remain before learner acceptance or publication.
+## Supplied-starter update
+
+Mark supplied `editor-lazy-tofu-starter.sb3` on 9 November 2026 to replace the generated starter. The editor starter and offline download are exact copies of that file. The project preparation script now preserves this supplied starter rather than regenerating it.
+
+The replacement starter was opened and rendered in the same Scratch runtime: the Stage and seven sprites loaded with zero blocks, all 11 sound assignments decoded, and Tofu's supplied sleeping position, size and costume were retained. Its 33 asset files and all costume and sound records were compared with the original archive and match exactly.
+
+Supplied starter SHA-256: `f8273e9d269e78a017a9151d5087cb29b45d96383f55ac23b6c9fd65b4570147`.
+
+The starter and completed identifiers, code directories and SB3 filenames are now `editor-lazy-tofu-starter` and `editor-lazy-tofu-complete`. Both project YAML files retain `build: true` and `type: 'code_editor_scratch'`. The completed SB3 content is unchanged by this naming update.
+
+The repository contains a complete first draft. The manual checks above remain before learner acceptance or publication.

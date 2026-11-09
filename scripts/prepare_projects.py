@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Prepare asset-preserving Code Club Editor projects from the supplied SB3."""
+"""Prepare the completed project while retaining the supplied starter unchanged."""
 
+import argparse
 import copy
 import hashlib
 import json
 from pathlib import Path
-import sys
 import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-COMPLETE = ROOT / "en/code/lazy-tofu-complete/lazy-tofu-complete.sb3"
-STARTER = ROOT / "en/code/lazy-tofu-starter/lazy-tofu-starter.sb3"
+COMPLETE = ROOT / "en/code/editor-lazy-tofu-complete/editor-lazy-tofu-complete.sb3"
+STARTER = ROOT / "en/code/editor-lazy-tofu-starter/editor-lazy-tofu-starter.sb3"
 
 
 def find_block(target, opcode, predicate=lambda block: True):
@@ -57,7 +57,14 @@ def save_project(destination, project, assets):
 
 
 def main():
-    source = Path(sys.argv[1]) if len(sys.argv) > 1 else COMPLETE
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("source", nargs="?", type=Path, default=COMPLETE)
+    parser.add_argument("--starter", type=Path, default=STARTER, help="Supplied starter to copy without modification")
+    args = parser.parse_args()
+    source = args.source
+    starter_bytes = args.starter.read_bytes()
+    with zipfile.ZipFile(args.starter) as archive:
+        starter = json.loads(archive.read("project.json"))
     with zipfile.ZipFile(source) as archive:
         project = json.loads(archive.read("project.json"))
         assets = {name: archive.read(name) for name in archive.namelist() if name != "project.json"}
@@ -143,29 +150,18 @@ def main():
             if block["opcode"] == "operator_gt" and block["inputs"]["OPERAND2"] == [1, [10, "190"]]:
                 block["inputs"]["OPERAND2"] = [1, [10, "180"]]
 
-    starter = copy.deepcopy(project)
-    starter["monitors"] = []
-    for target in starter["targets"]:
-        target["blocks"] = {}
-        target["comments"] = {}
-        target["variables"] = {}
-        target["lists"] = {}
-        target["broadcasts"] = {}
-        if not target["isStage"]:
-            target["visible"] = target["name"] == "Tofu"
-    starter_tofu = next(target for target in starter["targets"] if target["name"] == "Tofu")
-    starter_tofu.update(x=0, y=0, size=23, direction=90, currentCostume=0, rotationStyle="left-right")
-
     for before, after in zip(original["targets"], project["targets"]):
         assert before["costumes"] == after["costumes"], before["name"]
         assert before["sounds"] == after["sounds"], before["name"]
     save_project(COMPLETE, project, assets)
-    save_project(STARTER, starter, assets)
-    save_project(ROOT / "en/resources/lazy-tofu-starter.sb3", starter, assets)
-    save_project(ROOT / "en/solutions/lazy-tofu-complete.sb3", project, assets)
+    STARTER.write_bytes(starter_bytes)
+    (ROOT / "en/resources/editor-lazy-tofu-starter.sb3").write_bytes(starter_bytes)
+    save_project(ROOT / "en/solutions/editor-lazy-tofu-complete.sb3", project, assets)
     report = {
         "source_filename": source.name,
         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+        "starter_source_filename": args.starter.name,
+        "starter_sha256": hashlib.sha256(starter_bytes).hexdigest(),
         "sprites": [t["name"] for t in project["targets"] if not t["isStage"]],
         "costumes_including_backdrop": sum(len(t["costumes"]) for t in project["targets"]),
         "sound_assignments": sum(len(t["sounds"]) for t in project["targets"]),
