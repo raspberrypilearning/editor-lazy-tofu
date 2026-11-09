@@ -9,7 +9,7 @@ from pathlib import Path
 import zipfile
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 COMPLETE = ROOT / "en/code/editor-lazy-tofu-complete/editor-lazy-tofu-complete.sb3"
 STARTER = ROOT / "en/code/editor-lazy-tofu-starter/editor-lazy-tofu-starter.sb3"
 

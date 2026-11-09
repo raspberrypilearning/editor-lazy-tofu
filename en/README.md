@@ -11,4 +11,4 @@
 
 Both editor configurations use `type: 'code_editor_scratch'` and `build: true`.
 
-See [the authoring notes](../authoring/README.md) for the agreed brief, source preservation and remaining preview checks. The project stays unlisted while the draft is reviewed.
+See [the authoring notes](../.github/authoring/README.md) for the agreed brief, source preservation and remaining preview checks. The project stays unlisted while the draft is reviewed.

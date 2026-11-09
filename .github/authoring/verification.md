@@ -54,4 +54,10 @@ Supplied starter SHA-256: `f8273e9d269e78a017a9151d5087cb29b45d96383f55ac23b6c9f
 
 The starter and completed identifiers, code directories and SB3 filenames are now `editor-lazy-tofu-starter` and `editor-lazy-tofu-complete`. Both project YAML files retain `build: true` and `type: 'code_editor_scratch'`. The completed SB3 content is unchanged by this naming update.
 
+## Import layout correction
+
+The site rejected the initial imports with `Expected a file or directory at authoring/images`, reported in [issue 4](https://github.com/raspberrypilearning/editor-lazy-tofu/issues/4) and three earlier duplicate reports. The webhook had accepted the push; the site import had failed afterwards.
+
+Authoring notes and the preparation script were moved into the existing `.github/authoring/` area so the importer only sees `en` as project content. `listed: false` and both `build: true` settings are retained. A GitHub push alone is not proof of a successful site import.
+
 The repository contains a complete first draft. The manual checks above remain before learner acceptance or publication.

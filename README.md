@@ -13,7 +13,7 @@ The tutorial builds a playable game first, then adds the complete sleeping, waki
 ## Resources
 See [the English tutorial](en/meta.yml), [starter project](en/code/editor-lazy-tofu-starter), [completed project](en/code/editor-lazy-tofu-complete), [offline resources](en/resources) and [solution](en/solutions).
 
-Authoring decisions, source preservation and verification notes are in [authoring/README.md](authoring/README.md).
+Authoring decisions, source preservation and verification notes are in [.github/authoring/README.md](.github/authoring/README.md).
 
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md)

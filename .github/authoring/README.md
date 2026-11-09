@@ -19,7 +19,9 @@ The completed project is based on the supplied `Lazy Tofu!.sb3`. The starter is 
 
 The editor project identifiers, code folders and SB3 filenames are `editor-lazy-tofu-starter` and `editor-lazy-tofu-complete`. Both `project_config.yml` files use `type: 'code_editor_scratch'` and `build: true`.
 
-`scripts/prepare_projects.py` preserves all costume and sound records and every asset byte in the completed project. It keeps the supplied starter unchanged and synchronises the offline starter and downloadable solution.
+`.github/authoring/prepare_projects.py` preserves all costume and sound records and every asset byte in the completed project. It keeps the supplied starter unchanged and synchronises the offline starter and downloadable solution.
+
+Keep authoring notes and tools under `.github/authoring/`. The site importer treats additional top-level directories as project content: the original top-level `authoring` folder caused an `authoring/images missing` import failure.
 
 The completed project keeps the source gameplay and animations, with these corrections:
 
@@ -36,7 +38,7 @@ The unused `tofu-hurt` costume and duplicate sound assignments are retained. Cos
 To rebuild from the original supplied file:
 
 ```sh
-python3 scripts/prepare_projects.py '/path/to/Lazy Tofu!.sb3'
+python3 .github/authoring/prepare_projects.py '/path/to/Lazy Tofu!.sb3'
 ```
 
 With no argument, the script uses the committed completed project as its input. The setup changes are idempotent. It never generates a replacement starter from the completed project.
@@ -44,7 +46,7 @@ With no argument, the script uses the committed completed project as its input. 
 To import an updated supplied starter while rebuilding:
 
 ```sh
-python3 scripts/prepare_projects.py --starter '/path/to/editor-lazy-tofu-starter.sb3'
+python3 .github/authoring/prepare_projects.py --starter '/path/to/editor-lazy-tofu-starter.sb3'
 ```
 
 ## Tutorial sequence
