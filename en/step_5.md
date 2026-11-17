@@ -1,12 +1,12 @@
 ## Grow trees on the left bank
 
-Use clones to grow a stream of trees from one sprite.
+Use clones of **tree-left** to grow a stream of trees.
 
 ## Step 1
 
-When the green flag is clicked, hide the original tree and place it just below the left bank.
+When the green flag is clicked, hide **tree-left** and place it just below the left bank.
 
-Inside a `forever`{:class="block3control"} loop, create a clone, then wait `3` seconds before making the next one.
+Inside a `forever`{:class="block3control"} loop, create a clone, then `wait 3 seconds`{:class="block3control"} before making the next one.
 
 ![tree-left sprite](images/sprite-tree-left.png)
 
@@ -22,7 +22,7 @@ end
 
 ## Step 2
 
-The clones inherit the original sprite's hidden state. Give them their own script to make them visible.
+Make each clone visible when it starts.
 
 ![tree-left sprite](images/sprite-tree-left.png)
 

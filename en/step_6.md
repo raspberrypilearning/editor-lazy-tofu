@@ -4,6 +4,8 @@ Tofu will stay near the middle of the screen while trees and other objects move 
 
 ## Step 1
 
+Click on **Backdrops 1**.
+
 Create a variable called `speed`{:class="block3variables"}, **For all sprites**. Untick its checkbox for now.
 
 Set it to `1`{:class="block3variables"} when the green flag is clicked.
@@ -25,20 +27,21 @@ Replace `when green flag clicked`{:class="block3events"} with `when I receive (s
 ![Tofu sprite](images/sprite-tofu.png) ![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
-when I receive [start v]
+-when green flag clicked
++when I receive [start v]
 ```
 
 The Stage sets the speed before starting the movement and tree scripts.
 
 ## Step 3
 
-Make each tree travel up the screen. Together, the moving trees will make Tofu look as though they're travelling down the river.
+Make each tree travel up the screen so it looks like Tofu is moving.
 
 Find the `when I start as a clone`{:class="block3control"} script.
 
 After `show`{:class="block3looks"}, add a `repeat until`{:class="block3control"} loop. Inside it, change y by `speed`{:class="block3variables"}.
 
-Stop repeating when the clone's y position is greater than `180`, then delete the clone.
+Stop repeating when the clone's y position is `greater than 180`{:class="block3operators"}, then delete the clone.
 
 ![tree-left sprite](images/sprite-tree-left.png)
 
@@ -50,8 +53,6 @@ change y by (speed)
 end
 delete this clone
 ```
-
-A positive y change moves a sprite up. Deleting clones after they leave the screen makes room for new ones.
 
 ## Now run your code
 
