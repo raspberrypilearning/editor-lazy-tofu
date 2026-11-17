@@ -6,11 +6,11 @@ The other bank needs the same tree behaviour. Reuse the code you've made.
 
 Click on `tree-left`{:class="block3looks"}. Drag each of its **two complete scripts**, by its top block, onto the existing `tree-right`{:class="block3looks"} sprite in the sprite list. This copies the scripts across.
 
+![Drag each script from tree-left onto the tree-right sprite.](images/tree-script-copy.gif)
+
 ## Step 2
 
-In its `go to x: () y: ()`{:class="block3motion"} block, change x from `-180` to `180`.
-
-Negative x positions are on the left of the Stage; positive x positions are on the right. Keep y at `-200`, because trees on both banks enter at the same height.
+In its `go to x: () y: ()`{:class="block3motion"} block, change x from `-180`{:class="block3motion"} to `180`{:class="block3motion"}. Both trees start at `y: -300`{:class="block3motion"}.
 
 The start of the right-hand script should now be:
 
@@ -19,7 +19,7 @@ The start of the right-hand script should now be:
 ```blocks3
 when I receive [start v]
 hide
-go to x: (180) y: (-200)
+go to x: (180) y: (-300)
 ```
 
 Leave the clone script and the rest of the generator unchanged.

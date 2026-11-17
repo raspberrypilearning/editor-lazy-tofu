@@ -8,7 +8,7 @@ Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class=
 
 In the generator script, add `go to back layer`{:class="block3looks"} after `hide`{:class="block3looks"}.
 
-Move the `go to x: () y: ()`{:class="block3motion"} block **inside** the forever loop, before making the clone. Pick a random x from `-220` to `-180`, keeping y at `-200`.
+Move the `go to x: () y: ()`{:class="block3motion"} block **inside** the forever loop, before making the clone. Set x to `pick random (-220) to (-180)`{:class="block3operators"} and y to `-200`{:class="block3motion"}.
 
 Change the wait to `0.5` divided by `speed`{:class="block3variables"}.
 
@@ -31,7 +31,7 @@ Choosing the position inside the loop gives each new plant its own spot.
 
 The grass sprite has four costumes. In its clone script, change the random costume range to `1`–`4`.
 
-Keep the y limit at `180`, so each plant deletes itself when it reaches the top.
+Change the y limit to `180`{:class="block3operators"}, so each plant deletes itself when it reaches the top.
 
 ![grass-left sprite](images/sprite-grass-left.png)
 
