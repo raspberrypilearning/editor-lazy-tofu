@@ -8,7 +8,7 @@ In each arrow-key section, add `start sound (Plunge)`{:class="block3sound"} just
 
 After `change x by ()`{:class="block3motion"}, add `change size by (2)`{:class="block3looks"}, `wait (0.1) seconds`{:class="block3control"} and `change size by (-2)`{:class="block3looks"}.
 
-Inside your left-arrow section, the blocks should now be in this order:
+Inside your `left-arrow`{:class="block3motion"} section, the blocks should now be in this order:
 
 ![Tofu sprite](images/sprite-tofu.png)
 
@@ -21,12 +21,9 @@ change x by (-10)
 +wait (0.1) seconds
 +change size by (-2)
 ```
-
-Keep the arrow-key conditions and the `else`{:class="block3control"} sections around your movement code.
-
 ## Step 2
 
-Add the same sound and size changes to the right-arrow section. Keep its direction at `90`{:class="block3motion"} and its x change at `10`{:class="block3motion"}.
+Add the same sound and size changes to the `right-arrow`{:class="block3motion"} section.
 
 The two size changes balance each other, so Tofu returns to the same size after each stroke.
 

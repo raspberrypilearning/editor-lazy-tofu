@@ -1,24 +1,23 @@
-## Check both banks
+## End the game
 
-The right-bank trees need the same collision response.
+Stop the game when Tofu runs out of health.
 
-Use an `or`{:class="block3operators"} block to join two touching checks: one for `tree-left` and one for `tree-right`.
+Add a new `when I receive (start)`{:class="block3events"} script.
 
-![Tofu sprite](images/sprite-tofu.png)
+Use `wait until`{:class="block3control"} to wait for health to be less than `1`, then `stop all`{:class="block3control"}.
+
+![Stage thumbnail](images/sprite-stage.png)
 
 ```blocks3
 when I receive [start v]
-forever
-if <<touching (tree-left v)?> or <touching (tree-right v)?>> then
-start sound (Scream1 v)
-go to x: (0) y: (0)
-change [health v] by (-1)
-end
-end
+wait until <(health) < (1)>
+stop [all v]
 ```
 
-An `or` condition is true when either check is true, so you can share the response code.
+This script starts after the Stage has reset health, so it checks the current game.
 
 ## Now run your code
 
-Click the green flag and try a tree on each bank. Both should send Tofu to the middle and take away one health.
+Click the green flag and play until Tofu loses all three health points. Tofu, the plants, ripples and objects stop moving.
+
+Click the green flag again. Score and health reset for a new game.

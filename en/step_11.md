@@ -1,25 +1,44 @@
-## Grow grass on the right bank
+## Add river ripples
 
-Copy your working grass code to fill the other bank.
+Moving ripples will make the water look as though it's flowing too.
+
+Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}.
 
 ## Step 1
 
-Click on `grass-left`{:class="block3looks"} and drag both complete scripts onto the existing `grass-right`{:class="block3looks"} sprite.
+In the generator, change the random x range to `-180`–`180`. This puts the clones in the water between the banks.
+
+Change the wait to a random number from `1` to `2`, divided by `speed`{:class="block3variables"}.
+
+![water-ripples sprite](images/sprite-water-ripples.png)
+
+```blocks3
+when I receive [start v]
+hide
+go to [back v] layer
+forever
+go to x: (pick random (-180) to (180)) y: (-200)
+create clone of (myself v)
+wait ((pick random (1) to (2)) / (speed)) seconds
+end
+```
 
 ## Step 2
 
-In the `go to x: () y: ()`{:class="block3motion"} block, change the random x range from `-220`–`-180` to `180`–`220`.
+In the clone script, replace the random costume choice with `water-ripples`. Change the y limit to `180`.
 
-Those positive x positions place the plants on the right bank. Keep y at `-200`, so they enter from the bottom just like the left-hand plants.
-
-![grass-right sprite](images/sprite-grass-right.png)
+![water-ripples sprite](images/sprite-water-ripples.png)
 
 ```blocks3
-go to x: (pick random (180) to (220)) y: (-200)
+when I start as a clone
+switch costume to (water-ripples v)
+show
+repeat until <(y position) > (180)>
+change y by (speed)
+end
+delete this clone
 ```
-
-The wait, costume range and clone movement can all stay the same.
 
 ## Now run your code
 
-Click the green flag. Grass should stay on the banks on both sides of the water.
+Click the green flag. Ripples travel through the river at the same speed as the plants on the banks.

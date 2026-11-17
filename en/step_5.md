@@ -1,35 +1,38 @@
-## Set the river speed
+## Grow trees on the left bank
 
-Tofu will stay near the middle of the screen while trees and other objects move past. A shared variable will keep their movement at the same speed.
+Use clones to grow a stream of trees from one sprite.
 
 ## Step 1
 
-Create a variable called `speed`{:class="block3variables"}, **For all sprites**. Untick its checkbox for now.
+When the green flag is clicked, hide the original tree and place it just below the left bank.
 
-Set it to `1` when the green flag is clicked.
+Inside a `forever`{:class="block3control"} loop, create a clone, then wait `3` seconds before making the next one.
 
-Then make a new message called `start` in a `broadcast ()`{:class="block3events"} block and send it after setting the speed.
-
-![Stage thumbnail](images/sprite-stage.png)
+![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
 when green flag clicked
-set [speed v] to (1)
-broadcast (start v)
+hide
+go to x: (-180) y: (-200)
+forever
+create clone of (myself v)
+wait (3) seconds
+end
 ```
 
 ## Step 2
 
-At the top of the movement loop, replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"}.
+The clones inherit the original sprite's hidden state. Give them their own script to make them visible.
 
-![Tofu sprite](images/sprite-tofu.png)
+![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
-when I receive [start v]
+when I start as a clone
+show
 ```
-
-The Stage sets up the speed first, then tells the game to start. Later, Tofu will send this same message after jumping into the water.
 
 ## Now run your code
 
-Click the green flag. Tofu should still move with the arrow keys. The river scenery will use the same `start` message next.
+Click the green flag. A tree appears at the bottom of the left bank.
+
+New trees appear in the same spot every three seconds. Next, you'll move them along the bank.

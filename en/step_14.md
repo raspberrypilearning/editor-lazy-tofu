@@ -1,25 +1,35 @@
-## Make the ripples pulse
+## Float food and rubbish
 
-Give the water a little movement of its own by making each ripple grow and shrink.
+Give Tofu some things to find in the river.
 
-Add a **second** `when I start as a clone`{:class="block3control"} script.
+Copy the generator and movement scripts from `water-ripples`{:class="block3looks"} to `objects`{:class="block3looks"}. Leave the size-changing script behind for now.
 
-Inside a forever loop, increase the size by `5`, wait `0.1` seconds, then decrease it by `5` and wait again.
+## Step 1
 
-![water-ripples sprite](images/sprite-water-ripples.png)
+The generator already chooses positions in the water and waits between clones. Keep that script as it is.
+
+In the clone movement script, remove the whole `if then else`{:class="block3control"} block that chooses ripple costumes.
+
+Replace it with one costume block that picks a random number from `1` to `6`.
+
+![objects sprite](images/sprite-objects.png)
 
 ```blocks3
 when I start as a clone
-forever
-change size by (5)
-wait (0.1) seconds
-change size by (-5)
-wait (0.1) seconds
+switch costume to (pick random (1) to (6))
+show
+repeat until <(y position) > (180)>
+change y by (speed)
 end
+delete this clone
 ```
 
-Both clone scripts run together: one moves the ripple up the river, and the other changes its size. When the movement script deletes the clone, both stop.
+## Step 2
+
+Look at the `Costumes`{:class="block3looks"} tab. The first three costumes are food: shrimp, snail and worm. The next three are rubbish: bottle, can and crisp packet.
+
+Keep them in this order. You'll use the costume number to tell food from rubbish later.
 
 ## Now run your code
 
-Click the green flag. The ripples pulse as they drift through the water.
+Click the green flag. Food and rubbish float through the river. They don't affect Tofu yet.

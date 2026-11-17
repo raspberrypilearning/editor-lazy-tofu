@@ -1,29 +1,50 @@
-## Grow trees on the right bank
+## Grow grass on the left bank
 
-The other bank needs the same tree behaviour. Reuse the code you've made.
+Use the same clone pattern for smaller plants. These will appear more often, at slightly different positions along the bank.
+
+Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class="block3looks"}.
 
 ## Step 1
 
-Click on `tree-left`{:class="block3looks"}. Drag each of its **two complete scripts**, by its top block, onto the existing `tree-right`{:class="block3looks"} sprite in the sprite list. This copies the scripts across.
+In the generator script, add `go to back layer`{:class="block3looks"} after `hide`{:class="block3looks"}.
 
-## Step 2
+Move the `go to x: () y: ()`{:class="block3motion"} block **inside** the forever loop, before making the clone. Pick a random x from `-220` to `-180`, keeping y at `-200`.
 
-In its `go to x: () y: ()`{:class="block3motion"} block, change x from `-180` to `180`.
+Change the wait to `0.5` divided by `speed`{:class="block3variables"}.
 
-Negative x positions are on the left of the Stage; positive x positions are on the right. Keep y at `-200`, because trees on both banks enter at the same height.
-
-The start of the right-hand script should now be:
-
-![tree-right sprite](images/sprite-tree-right.png)
+![grass-left sprite](images/sprite-grass-left.png)
 
 ```blocks3
 when I receive [start v]
 hide
-go to x: (180) y: (-200)
+go to [back v] layer
+forever
+go to x: (pick random (-220) to (-180)) y: (-200)
+create clone of (myself v)
+wait ((0.5) / (speed)) seconds
+end
 ```
 
-Leave the clone script and the rest of the generator unchanged.
+Choosing the position inside the loop gives each new plant its own spot.
+
+## Step 2
+
+The grass sprite has four costumes. In its clone script, change the random costume range to `1`–`4`.
+
+Keep the y limit at `180`, so each plant deletes itself when it reaches the top.
+
+![grass-left sprite](images/sprite-grass-left.png)
+
+```blocks3
+when I start as a clone
+switch costume to (pick random (1) to (4))
+show
+repeat until <(y position) > (180)>
+change y by (speed)
+end
+delete this clone
+```
 
 ## Now run your code
 
-Click the green flag. Trees should travel along both banks, leaving the river clear between them.
+Click the green flag. Tufts, flowers, reeds and bushes move up the left bank, behind the trees.

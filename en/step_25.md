@@ -1,28 +1,25 @@
-## Add snoring
+## Wake up and wave
 
-Give sleeping Tofu a sound to go with the breathing.
+Let Tofu pause and wave before getting into the water.
 
-Add `start sound (Snoring)`{:class="block3sound"} at the beginning of the outer `repeat (4)`{:class="block3control"} loop, before the two breathing loops.
+Add these blocks **after** `wait until <key (space) pressed?>`{:class="block3control"} and **before** `go to x: (0) y: (0)`{:class="block3motion"}.
+
+Switch to `tofu`, wait a second, then start `Magic Spell` and switch to the waving costume. After half a second, return to `tofu` and wait another half a second.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-repeat (4)
-start sound (Snoring v)
-repeat (10)
-wait (0.04) seconds
-change size by (1)
-end
-repeat (10)
-wait (0.04) seconds
-change size by (-1)
-end
-end
-wait until <key (space v) pressed?>
+switch costume to (tofu v)
+wait (1) seconds
+start sound (Magic Spell v)
+switch costume to (tofu-waving v)
+wait (0.5) seconds
+switch costume to (tofu v)
+wait (0.5) seconds
 ```
 
-Use `start sound`{:class="block3sound"} so the breathing animation can continue while the sound plays.
+Keep the position change and `broadcast (start)`{:class="block3events"} at the end. You'll replace the position change with a jump shortly.
 
 ## Now run your code
 
-Click the green flag. Tofu snores and breathes four times, then waits on the bank. Press space after the four breaths to wake up and play.
+Click the green flag, wait for the four breaths, then press space. Tofu wakes up, waves, then starts the game.
