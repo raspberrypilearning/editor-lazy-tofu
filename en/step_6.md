@@ -2,8 +2,6 @@
 
 Use clones to grow a stream of trees from one sprite.
 
-Click on the `tree-left`{:class="block3looks"} sprite. Its costumes and size are already set up for the left bank.
-
 ## Step 1
 
 When the game starts, hide the original tree and place it just below the left bank.

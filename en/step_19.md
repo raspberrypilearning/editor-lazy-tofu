@@ -2,7 +2,7 @@
 
 Food is worth collecting, but rubbish should cost Tofu some health.
 
-On `objects`{:class="block3looks"}, replace the **inner** `if then`{:class="block3control"} block, which checks the costume number, with `if then else`{:class="block3control"}.
+Replace the **inner** `if then`{:class="block3control"} block, which checks the costume number, with `if then else`{:class="block3control"}.
 
 Keep the food code in its first section. In `else`, change health by `-1`, start the `Scream1` sound and delete the clone.
 

@@ -2,7 +2,7 @@
 
 Let Tofu pause and wave before getting into the water.
 
-On `Tofu`{:class="block3looks"}, add these blocks **after** `wait until <key (space) pressed?>`{:class="block3control"} and **before** `go to x: (0) y: (0)`{:class="block3motion"}.
+Add these blocks **after** `wait until <key (space) pressed?>`{:class="block3control"} and **before** `go to x: (0) y: (0)`{:class="block3motion"}.
 
 Switch to `tofu`, wait a second, then start `Magic Spell` and switch to the waving costume. After half a second, return to `tofu` and wait another half a second.
 

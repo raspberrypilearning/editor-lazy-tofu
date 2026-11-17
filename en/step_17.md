@@ -2,11 +2,11 @@
 
 Tofu will earn points for food and lose health after collisions.
 
-Click on the `Stage`. Make two variables, `score`{:class="block3variables"} and `health`{:class="block3variables"}, both **For all sprites**.
+Make two variables, `score`{:class="block3variables"} and `health`{:class="block3variables"}, both **For all sprites**.
 
 Tick both checkboxes so the player can see them. You can drag their displays to clear spaces at the top of the Stage.
 
-In the Stage's green-flag script, set score to `0` and health to `3`, before sending `start`.
+In the green-flag script, set score to `0` and health to `3`, before sending `start`.
 
 ![Stage thumbnail](images/sprite-stage.png)
 

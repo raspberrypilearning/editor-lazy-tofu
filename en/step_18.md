@@ -2,7 +2,7 @@
 
 Make each food clone check whether Tofu has reached it.
 
-Click on `objects`{:class="block3looks"} and find its movement script.
+Find the movement script.
 
 Inside `repeat until`{:class="block3control"}, after the y change, add an `if then`{:class="block3control"} block that checks `touching (Tofu)`{:class="block3sensing"}.
 

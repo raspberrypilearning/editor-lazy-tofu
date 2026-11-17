@@ -6,8 +6,6 @@ Copy your working grass code to fill the other bank.
 
 Click on `grass-left`{:class="block3looks"} and drag both complete scripts onto the existing `grass-right`{:class="block3looks"} sprite.
 
-Click on `grass-right`{:class="block3looks"} to edit its copies.
-
 ## Step 2
 
 In the `go to x: () y: ()`{:class="block3motion"} block, change the random x range from `-220`–`-180` to `180`–`220`.

@@ -2,7 +2,7 @@
 
 Replace the instant move into the river with a short jump.
 
-On `Tofu`{:class="block3looks"}, find the `go to x: (0) y: (0)`{:class="block3motion"} block at the end of the opening script. Replace that block with this sequence.
+Find the `go to x: (0) y: (0)`{:class="block3motion"} block at the end of the opening script. Replace that block with this sequence.
 
 Switch to `tofu-jumping`, return to `left-right` rotation, then glide through three positions to reach the middle of the river.
 

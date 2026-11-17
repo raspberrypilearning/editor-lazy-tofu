@@ -2,7 +2,7 @@
 
 Make each tree travel up the screen. Together, the moving trees will make Tofu look as though they're travelling down the river.
 
-Click on `tree-left`{:class="block3looks"} and find its `when I start as a clone`{:class="block3control"} script.
+Find the `when I start as a clone`{:class="block3control"} script.
 
 After `show`{:class="block3looks"}, add a `repeat until`{:class="block3control"} loop. Inside it, change y by `speed`{:class="block3variables"}.
 

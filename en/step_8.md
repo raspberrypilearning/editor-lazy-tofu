@@ -2,8 +2,6 @@
 
 Choose different trees and leave different gaps between them.
 
-You're still working on `tree-left`{:class="block3looks"}.
-
 ## Step 1
 
 At the beginning of the clone script, add a `switch costume to ()`{:class="block3looks"} block. Put `pick random (1) to (3)`{:class="block3operators"} inside it to choose one of the three tree costumes.

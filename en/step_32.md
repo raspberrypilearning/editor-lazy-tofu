@@ -2,7 +2,7 @@
 
 Give the player a slider to change how fast the river passes.
 
-Click on the `Stage` and tick the checkbox beside `speed`{:class="block3variables"} to show it.
+Tick the checkbox beside `speed`{:class="block3variables"} to show it.
 
 ![Stage thumbnail](images/sprite-stage.png)
 

@@ -2,7 +2,7 @@
 
 Moving ripples will make the water look as though it's flowing too.
 
-Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}, then select `water-ripples`{:class="block3looks"}.
+Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}.
 
 ## Step 1
 

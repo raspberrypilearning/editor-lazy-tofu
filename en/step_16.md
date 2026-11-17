@@ -2,7 +2,7 @@
 
 Add a smaller version of the ripples' pulsing effect to the floating objects.
 
-On `objects`{:class="block3looks"}, add a second `when I start as a clone`{:class="block3control"} script.
+Add a second `when I start as a clone`{:class="block3control"} script.
 
 Change the size by `2`, wait, change it by `-2`, then wait again. Repeat this in a forever loop.
 

@@ -2,7 +2,7 @@
 
 Make Tofu waddle down the bank before jumping in.
 
-On `Tofu`{:class="block3looks"}, add these blocks after the wave sequence, before the final position change.
+Add these blocks after the wave sequence, before the final position change.
 
 Switch to `tofu-running` and set the rotation style to `all around` so Tofu can lean from side to side.
 

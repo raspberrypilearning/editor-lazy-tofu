@@ -51,6 +51,10 @@ python3 .github/authoring/prepare_projects.py --starter '/path/to/editor-lazy-to
 
 ## Tutorial sequence
 
+Keep learner instructions brief. Avoid black inline-code highlighting wherever possible: use the matching Scratch block colour for block names, parts, options and values. For example, `then` and `else` use `block3control`, while movement amounts, directions and rotation styles use `block3motion`. Match each number to the block it belongs to; use plain text for ordinary prose.
+
+Let the sprite and Stage cards identify where to code; omit repeated sprite-selection instructions. Keep source and destination names where needed for copying scripts. Focus on additions and changes, without reminders to keep unchanged code unless a specific edit makes that clarification necessary.
+
 Place the appropriate labelled card from `en/images/sprite-*.png` directly above each script, with no intervening instructions. Always include a card above the first script in every Markdown file, even when continuing with the same sprite from the previous page. Use the Stage card for Stage scripts and the destination sprite's card above copied scripts being edited. If a page asks learners to select a sprite or the Stage but shows no script, place its card beside the selection instruction. The cards use each target's saved costume in the starter and preserve the different left- and right-bank artwork. Regenerate them with `.github/authoring/make_sprite_cards.py` (Pillow and `rsvg-convert` required).
 
 Pages 1–4 give learners control of Tofu. Page 5 introduces the shared speed and start message. Pages 6–16 build the river with clones, including the two left-to-right copying exercises. Pages 17–22 add score, health, collisions and the ending. Pages 23–29 add the complete opening without removing the playable game. Pages 30–32 finish the audio and speed controls. Page 33 offers learner choice.

@@ -2,7 +2,7 @@
 
 Make the trees into obstacles. A collision will send Tofu back to the middle and cost one health.
 
-Click on `Tofu`{:class="block3looks"} and add a new script for the `start` message.
+Add a new script for the `start` message.
 
 Inside a forever loop, check whether Tofu is touching `tree-left`. If so, start the `Scream1` sound, go to the middle of the river and change health by `-1`.
 

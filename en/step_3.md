@@ -2,8 +2,6 @@
 
 Tofu has a swimming costume ready to use. Show it while moving, then return to the resting pose when neither arrow key is pressed.
 
-Click on the `Tofu`{:class="block3looks"} sprite.
-
 Add `switch costume to (tofu-swimming)`{:class="block3looks"} at the beginning of each arrow-key section.
 
 Replace the right-arrow `if then`{:class="block3control"} with an `if then else`{:class="block3control"} block. Use its new `else` section to switch back to `tofu`.
