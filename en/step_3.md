@@ -8,6 +8,8 @@ Add `switch costume to (tofu-swimming)`{:class="block3looks"} at the beginning o
 
 Replace the right-arrow `if then`{:class="block3control"} with an `if then else`{:class="block3control"} block. Use its new `else` section to switch back to `tofu`.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 when green flag clicked
 forever

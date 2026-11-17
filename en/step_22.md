@@ -6,6 +6,8 @@ Click on the `Stage` and add a new `when I receive (start)`{:class="block3events
 
 Use `wait until`{:class="block3control"} to wait for health to be less than `1`, then `stop all`{:class="block3control"}.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when I receive [start v]
 wait until <(health) < (1)>

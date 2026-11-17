@@ -8,17 +8,23 @@ Click on the `Tofu`{:class="block3looks"} sprite.
 
 Add a `when green flag clicked`{:class="block3events"} block and a `forever`{:class="block3control"} loop.
 
-Inside the loop, check whether the left arrow key is pressed. A negative change in x moves Tofu left.
+Inside the loop, add an `if then else`{:class="block3control"} block to check whether the left arrow key is pressed. In the `then` section, point in direction `-90` to face left, then change x by `-10` to move Tofu left.
+
+Leave the `else` section empty for now. You'll add right-arrow movement there next.
+
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 when green flag clicked
 forever
 if <key (left arrow v) pressed?> then
+point in direction (-90)
 change x by (-10)
+else
 end
 end
 ```
 
 ## Now run your code
 
-Click the green flag and press the left arrow. Tofu moves left.
+Click the green flag and press the left arrow. Tofu faces left and moves left.

@@ -16,6 +16,8 @@ Negative x positions are on the left of the Stage; positive x positions are on t
 
 The start of the right-hand script should now be:
 
+![tree-right sprite](images/sprite-tree-right.png)
+
 ```blocks3
 when I receive [start v]
 hide

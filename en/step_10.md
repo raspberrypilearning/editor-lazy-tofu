@@ -12,6 +12,8 @@ Move the `go to x: () y: ()`{:class="block3motion"} block **inside** the forever
 
 Change the wait to `0.5` divided by `speed`{:class="block3variables"}.
 
+![grass-left sprite](images/sprite-grass-left.png)
+
 ```blocks3
 when I receive [start v]
 hide
@@ -30,6 +32,8 @@ Choosing the position inside the loop gives each new plant its own spot.
 The grass sprite has four costumes. In its clone script, change the random costume range to `1`–`4`.
 
 Keep the y limit at `180`, so each plant deletes itself when it reaches the top.
+
+![grass-left sprite](images/sprite-grass-left.png)
 
 ```blocks3
 when I start as a clone

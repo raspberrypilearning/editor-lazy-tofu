@@ -12,6 +12,8 @@ After `change x by ()`{:class="block3motion"}, increase the size by `2`, wait `0
 
 Inside your left-arrow section, the blocks should now be in this order:
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 switch costume to (tofu-swimming v)
 start sound (Plunge v)

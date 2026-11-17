@@ -14,6 +14,8 @@ In the `go to x: () y: ()`{:class="block3motion"} block, change the random x ran
 
 Those positive x positions place the plants on the right bank. Keep y at `-200`, so they enter from the bottom just like the left-hand plants.
 
+![grass-right sprite](images/sprite-grass-right.png)
+
 ```blocks3
 go to x: (pick random (180) to (220)) y: (-200)
 ```

@@ -8,6 +8,8 @@ In the clone script, replace the single costume block with an `if then else`{:cl
 
 If x is less than `0`, the clone is on the left: choose `water-ripples2`. Otherwise, choose `water-ripples`.
 
+![water-ripples sprite](images/sprite-water-ripples.png)
+
 ```blocks3
 when I start as a clone
 if <(x position) < (0)> then

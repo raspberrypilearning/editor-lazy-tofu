@@ -10,6 +10,8 @@ In the generator, change the random x range to `-180`–`180`. This puts the clo
 
 Change the wait to a random number from `1` to `2`, divided by `speed`{:class="block3variables"}.
 
+![water-ripples sprite](images/sprite-water-ripples.png)
+
 ```blocks3
 when I receive [start v]
 hide
@@ -24,6 +26,8 @@ end
 ## Step 2
 
 In the clone script, replace the random costume choice with `water-ripples`. Change the y limit to `180`.
+
+![water-ripples sprite](images/sprite-water-ripples.png)
 
 ```blocks3
 when I start as a clone

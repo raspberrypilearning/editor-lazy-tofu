@@ -6,6 +6,8 @@ On `Tofu`{:class="block3looks"}, add these blocks **after** `wait until <key (sp
 
 Switch to `tofu`, wait a second, then start `Magic Spell` and switch to the waving costume. After half a second, return to `tofu` and wait another half a second.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 switch costume to (tofu v)
 wait (1) seconds

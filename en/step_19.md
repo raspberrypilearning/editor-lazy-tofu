@@ -6,6 +6,8 @@ On `objects`{:class="block3looks"}, replace the **inner** `if then`{:class="bloc
 
 Keep the food code in its first section. In `else`, change health by `-1`, start the `Scream1` sound and delete the clone.
 
+![objects sprite](images/sprite-objects.png)
+
 ```blocks3
 if <touching (Tofu v)?> then
 if <(costume [number v]) < (4)> then

@@ -6,6 +6,8 @@ On `water-ripples`{:class="block3looks"}, add a **second** `when I start as a cl
 
 Inside a forever loop, increase the size by `5`, wait `0.1` seconds, then decrease it by `5` and wait again.
 
+![water-ripples sprite](images/sprite-water-ripples.png)
+
 ```blocks3
 when I start as a clone
 forever

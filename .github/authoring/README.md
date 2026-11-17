@@ -51,6 +51,8 @@ python3 .github/authoring/prepare_projects.py --starter '/path/to/editor-lazy-to
 
 ## Tutorial sequence
 
+Place the appropriate labelled card from `en/images/sprite-*.png` directly above each script, with no intervening instructions. Always include a card above the first script in every Markdown file, even when continuing with the same sprite from the previous page. Use the Stage card for Stage scripts and the destination sprite's card above copied scripts being edited. If a page asks learners to select a sprite or the Stage but shows no script, place its card beside the selection instruction. The cards use each target's saved costume in the starter and preserve the different left- and right-bank artwork. Regenerate them with `.github/authoring/make_sprite_cards.py` (Pillow and `rsvg-convert` required).
+
 Pages 1–4 give learners control of Tofu. Page 5 introduces the shared speed and start message. Pages 6–16 build the river with clones, including the two left-to-right copying exercises. Pages 17–22 add score, health, collisions and the ending. Pages 23–29 add the complete opening without removing the playable game. Pages 30–32 finish the audio and speed controls. Page 33 offers learner choice.
 
 When the opening is introduced on page 23, the Stage stops sending `start`; Tofu sends it after entering the river instead. This switch is explained and completed on the same page. The existing movement, scenery and collision handlers keep using the same message.

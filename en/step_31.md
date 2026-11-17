@@ -4,6 +4,8 @@ Add a squeaky sound when the player presses space.
 
 On the `Stage`, make a separate key-press script using the supplied `Squeaky Toy` sound.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when [space v] key pressed
 play sound (Squeaky Toy v) until done

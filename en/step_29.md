@@ -6,6 +6,8 @@ On `Tofu`{:class="block3looks"}, add `start sound (Splash)`{:class="block3sound"
 
 Place these blocks after the last glide and before the `start` broadcast.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 glide (0.2) secs to x: (0) y: (0)
 start sound (Splash v)

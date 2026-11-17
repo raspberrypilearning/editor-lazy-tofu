@@ -8,6 +8,8 @@ You're still working on `tree-left`{:class="block3looks"}.
 
 At the beginning of the clone script, add a `switch costume to ()`{:class="block3looks"} block. Put `pick random (1) to (3)`{:class="block3operators"} inside it to choose one of the three tree costumes.
 
+![tree-left sprite](images/sprite-tree-left.png)
+
 ```blocks3
 when I start as a clone
 switch costume to (pick random (1) to (3))
@@ -21,6 +23,8 @@ delete this clone
 ## Step 2
 
 In the other script, replace the `3` in the wait with a division block: a random number from `3` to `10`, divided by `speed`{:class="block3variables"}.
+
+![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
 when I receive [start v]

@@ -8,6 +8,8 @@ The `start` message already starts the movement, scenery and collision checks. Y
 
 Click on the `Stage`. Remove `broadcast (start)`{:class="block3events"} from its green-flag script. Keep the three variable resets.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when green flag clicked
 set [speed v] to (1)
@@ -17,11 +19,13 @@ set [health v] to (3)
 
 ## Step 2
 
-Click on `Tofu`{:class="block3looks"} and find the green-flag starting-position script.
+Click on `Tofu`{:class="block3looks"} and add a new `when green flag clicked`{:class="block3events"} script.
 
-Change the position to `x: -197, y: 107` and the costume to `tofu-sleeping`.
+Set the position to `x: -197, y: 107`, the size to `23%`, the direction to `90` and the rotation style to `left-right`. Show Tofu and switch to the `tofu-sleeping` costume.
 
 At the end, wait until the space key is pressed, go to `0, 0`, then broadcast `start`.
+
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 when green flag clicked

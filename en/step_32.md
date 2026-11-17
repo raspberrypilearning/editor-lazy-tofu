@@ -4,6 +4,8 @@ Give the player a slider to change how fast the river passes.
 
 Click on the `Stage` and tick the checkbox beside `speed`{:class="block3variables"} to show it.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 Right-click its display on the Stage and choose **slider**. Right-click it again and choose **change slider range**. Set the minimum to `1` and the maximum to `20`.
 
 Keep the minimum above zero: your clone generators divide their waits by speed, so zero would not give them a usable interval.

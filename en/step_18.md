@@ -10,6 +10,8 @@ Inside that, add another `if then`{:class="block3control"} block. Check whether 
 
 The first three costumes are food. When one touches Tofu, add `5` to the score, start the `Chomp` sound and delete the clone.
 
+![objects sprite](images/sprite-objects.png)
+
 ```blocks3
 when I start as a clone
 switch costume to (pick random (1) to (6))

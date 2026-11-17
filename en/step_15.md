@@ -14,6 +14,8 @@ In the clone movement script, remove the whole `if then else`{:class="block3cont
 
 Replace it with one costume block that picks a random number from `1` to `6`.
 
+![objects sprite](images/sprite-objects.png)
+
 ```blocks3
 when I start as a clone
 switch costume to (pick random (1) to (6))
