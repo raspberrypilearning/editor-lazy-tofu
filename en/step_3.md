@@ -4,7 +4,7 @@ Tofu has a swimming costume ready to use. Show it while moving, then return to t
 
 Add `switch costume to (tofu-swimming)`{:class="block3looks"} at the beginning of each arrow-key section.
 
-Replace the right-arrow `if then`{:class="block3control"} with an `if then else`{:class="block3control"} block. Use its new `else` section to switch back to `tofu`.
+In the right-arrow block's empty `else`{:class="block3control"} section, add `switch costume to (tofu)`{:class="block3looks"}.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
