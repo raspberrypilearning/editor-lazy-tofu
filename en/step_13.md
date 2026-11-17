@@ -1,27 +1,25 @@
-## Choose the ripple costume
+## Make the ripples pulse
 
-The ripple sprite has two costumes facing opposite ways. Choose one to match the side of the river where each clone appears.
+Give the water a little movement of its own by making each ripple grow and shrink.
 
-In the clone script, replace the single costume block with an `if then else`{:class="block3control"} block.
+Add a **second** `when I start as a clone`{:class="block3control"} script.
 
-If x is less than `0`, the clone is on the left: choose `water-ripples2`. Otherwise, choose `water-ripples`.
+Inside a forever loop, increase the size by `5`, wait `0.1` seconds, then decrease it by `5` and wait again.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 
 ```blocks3
 when I start as a clone
-if <(x position) < (0)> then
-switch costume to (water-ripples2 v)
-else
-switch costume to (water-ripples v)
+forever
+change size by (5)
+wait (0.1) seconds
+change size by (-5)
+wait (0.1) seconds
 end
-show
-repeat until <(y position) > (180)>
-change y by (speed)
-end
-delete this clone
 ```
+
+Both clone scripts run together: one moves the ripple up the river, and the other changes its size. When the movement script deletes the clone, both stop.
 
 ## Now run your code
 
-Click the green flag. Watch ripples on both sides of the river: their costumes face opposite ways.
+Click the green flag. The ripples pulse as they drift through the water.

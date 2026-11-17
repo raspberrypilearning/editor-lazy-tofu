@@ -1,25 +1,25 @@
-## Make the objects bob
+## Set up score and health
 
-Add a smaller version of the ripples' pulsing effect to the floating objects.
+Tofu will earn points for food and lose health after collisions.
 
-Add a second `when I start as a clone`{:class="block3control"} script.
+Make two variables, `score`{:class="block3variables"} and `health`{:class="block3variables"}, both **For all sprites**.
 
-Change the size by `2`, wait, change it by `-2`, then wait again. Repeat this in a forever loop.
+Tick both checkboxes so the player can see them. You can drag their displays to clear spaces at the top of the Stage.
 
-![objects sprite](images/sprite-objects.png)
+In the green-flag script, set score to `0` and health to `3`, before sending `start`.
+
+![Stage thumbnail](images/sprite-stage.png)
 
 ```blocks3
-when I start as a clone
-forever
-change size by (2)
-wait (0.1) seconds
-change size by (-2)
-wait (0.1) seconds
-end
+when green flag clicked
+set [speed v] to (1)
+set [score v] to (0)
+set [health v] to (3)
+broadcast (start v)
 ```
 
-You can also copy the ripple's size-changing script and change both size values.
+Setting the variables before the broadcast means all the game scripts begin with the new values.
 
 ## Now run your code
 
-Click the green flag. Food and rubbish bob as they pass Tofu.
+Click the green flag. Score starts at `0` and health starts at `3`. Next, you'll make food change the score.

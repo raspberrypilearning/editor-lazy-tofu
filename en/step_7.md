@@ -1,17 +1,16 @@
-## Move the tree clones
+## Vary the trees
 
-Make each tree travel up the screen. Together, the moving trees will make Tofu look as though they're travelling down the river.
+Choose different trees and leave different gaps between them.
 
-Find the `when I start as a clone`{:class="block3control"} script.
+## Step 1
 
-After `show`{:class="block3looks"}, add a `repeat until`{:class="block3control"} loop. Inside it, change y by `speed`{:class="block3variables"}.
-
-Stop repeating when the clone's y position is greater than `180`, then delete the clone.
+At the beginning of the clone script, add a `switch costume to ()`{:class="block3looks"} block. Put `pick random (1) to (3)`{:class="block3operators"} inside it to choose one of the three tree costumes.
 
 ![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
 when I start as a clone
+switch costume to (pick random (1) to (3))
 show
 repeat until <(y position) > (180)>
 change y by (speed)
@@ -19,8 +18,24 @@ end
 delete this clone
 ```
 
-A positive y change moves a sprite up. Deleting clones after they leave the screen makes room for new ones.
+## Step 2
+
+In the other script, replace the `3` in the wait with a division block: a random number from `3` to `10`, divided by `speed`{:class="block3variables"}.
+
+![tree-left sprite](images/sprite-tree-left.png)
+
+```blocks3
+when I receive [start v]
+hide
+go to x: (-180) y: (-200)
+forever
+create clone of (myself v)
+wait ((pick random (3) to (10)) / (speed)) seconds
+end
+```
+
+At speed `1`, trees appear every 3–10 seconds. A higher speed will make them move faster and appear more often, keeping the bank filled as it passes.
 
 ## Now run your code
 
-Click the green flag and watch the left bank. Trees move from the bottom to the top, then disappear.
+Click the green flag. Watch for all three tree shapes and the different gaps between them.

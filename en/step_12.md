@@ -1,37 +1,20 @@
-## Add river ripples
+## Choose the ripple costume
 
-Moving ripples will make the water look as though it's flowing too.
+The ripple sprite has two costumes facing opposite ways. Choose one to match the side of the river where each clone appears.
 
-Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}.
+In the clone script, replace the single costume block with an `if then else`{:class="block3control"} block.
 
-## Step 1
-
-In the generator, change the random x range to `-180`–`180`. This puts the clones in the water between the banks.
-
-Change the wait to a random number from `1` to `2`, divided by `speed`{:class="block3variables"}.
-
-![water-ripples sprite](images/sprite-water-ripples.png)
-
-```blocks3
-when I receive [start v]
-hide
-go to [back v] layer
-forever
-go to x: (pick random (-180) to (180)) y: (-200)
-create clone of (myself v)
-wait ((pick random (1) to (2)) / (speed)) seconds
-end
-```
-
-## Step 2
-
-In the clone script, replace the random costume choice with `water-ripples`. Change the y limit to `180`.
+If x is less than `0`, the clone is on the left: choose `water-ripples2`. Otherwise, choose `water-ripples`.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 
 ```blocks3
 when I start as a clone
+if <(x position) < (0)> then
+switch costume to (water-ripples2 v)
+else
 switch costume to (water-ripples v)
+end
 show
 repeat until <(y position) > (180)>
 change y by (speed)
@@ -41,4 +24,4 @@ delete this clone
 
 ## Now run your code
 
-Click the green flag. Ripples travel through the river at the same speed as the plants on the banks.
+Click the green flag. Watch ripples on both sides of the river: their costumes face opposite ways.
