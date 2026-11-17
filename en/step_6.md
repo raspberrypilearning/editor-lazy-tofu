@@ -41,14 +41,14 @@ Find the `when I start as a clone`{:class="block3control"} script.
 
 After `show`{:class="block3looks"}, add a `repeat until`{:class="block3control"} loop. Inside it, change y by `speed`{:class="block3variables"}.
 
-Stop repeating when the clone's y position is `greater than 180`{:class="block3operators"}, then delete the clone.
+Stop repeating when the clone's y position is `greater than 220`{:class="block3operators"}, then delete the clone.
 
 ![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
 when I start as a clone
 show
-repeat until <(y position) > (180)>
+repeat until <(y position) > (220)>
 change y by (speed)
 end
 delete this clone
