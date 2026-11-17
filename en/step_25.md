@@ -4,6 +4,8 @@ Give sleeping Tofu a sound to go with the breathing.
 
 On `Tofu`{:class="block3looks"}, add `start sound (Snoring)`{:class="block3sound"} at the beginning of the outer `repeat (4)`{:class="block3control"} loop, before the two breathing loops.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 repeat (4)
 start sound (Snoring v)

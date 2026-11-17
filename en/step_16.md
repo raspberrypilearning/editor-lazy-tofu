@@ -6,6 +6,8 @@ On `objects`{:class="block3looks"}, add a second `when I start as a clone`{:clas
 
 Change the size by `2`, wait, change it by `-2`, then wait again. Repeat this in a forever loop.
 
+![objects sprite](images/sprite-objects.png)
+
 ```blocks3
 when I start as a clone
 forever

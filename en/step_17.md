@@ -8,6 +8,8 @@ Tick both checkboxes so the player can see them. You can drag their displays to 
 
 In the Stage's green-flag script, set score to `0` and health to `3`, before sending `start`.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when green flag clicked
 set [speed v] to (1)

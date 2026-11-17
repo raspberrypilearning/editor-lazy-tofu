@@ -8,6 +8,8 @@ Switch to `tofu-running` and set the rotation style to `all around` so Tofu can 
 
 Repeat a pair of steps three times: move down, lean left, wait, then move down, lean right and wait again.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 switch costume to (tofu-running v)
 set rotation style [all around v]

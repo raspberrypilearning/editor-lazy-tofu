@@ -4,6 +4,8 @@ The right-bank trees need the same collision response.
 
 On `Tofu`{:class="block3looks"}, use an `or`{:class="block3operators"} block to join two touching checks: one for `tree-left` and one for `tree-right`.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 when I receive [start v]
 forever

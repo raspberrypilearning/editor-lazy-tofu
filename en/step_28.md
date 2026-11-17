@@ -6,6 +6,8 @@ On `Tofu`{:class="block3looks"}, find the `go to x: (0) y: (0)`{:class="block3mo
 
 Switch to `tofu-jumping`, return to `left-right` rotation, then glide through three positions to reach the middle of the river.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 switch costume to (tofu-jumping v)
 set rotation style [left-right v]

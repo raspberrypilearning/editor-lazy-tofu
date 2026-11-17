@@ -10,6 +10,8 @@ Set it to `1` when the green flag is clicked.
 
 Then make a new message called `start` in a `broadcast ()`{:class="block3events"} block and send it after setting the speed.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when green flag clicked
 set [speed v] to (1)
@@ -20,7 +22,7 @@ broadcast (start v)
 
 Click on `Tofu`{:class="block3looks"}. At the top of the movement loop, replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"}.
 
-Keep Tofu's separate starting-position script on the green flag.
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 when I receive [start v]

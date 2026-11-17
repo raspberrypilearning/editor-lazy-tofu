@@ -4,11 +4,13 @@ Give Tofu a way to swim back across the river, facing the direction of travel.
 
 You're still working on the `Tofu`{:class="block3looks"} sprite.
 
-Replace the movement loop's `if then`{:class="block3control"} block with an `if then else`{:class="block3control"} block. Keep the left-arrow movement in its first section.
+Keep the left-arrow movement in the `then` section of your `if then else`{:class="block3control"} block.
 
-In the `else` section, add another `if then`{:class="block3control"} block for the right arrow.
+In the empty `else` section, add an `if then`{:class="block3control"} block that checks whether the right arrow key is pressed. Inside it, change x by `10` to move Tofu right.
 
-Use direction `-90` to face left and `90` to face right.
+Before the new `change x by (10)`{:class="block3motion"} block, add `point in direction (90)`{:class="block3motion"} to face right. Keep direction `-90` in the left-arrow section.
+
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 when green flag clicked
@@ -17,7 +19,7 @@ if <key (left arrow v) pressed?> then
 point in direction (-90)
 change x by (-10)
 else
-if <key (right arrow v) pressed?> then
++if <key (right arrow v) pressed?> then
 point in direction (90)
 change x by (10)
 end

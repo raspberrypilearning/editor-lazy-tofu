@@ -6,6 +6,8 @@ On `Tofu`{:class="block3looks"}, add a `repeat (4)`{:class="block3control"} loop
 
 Inside it, add two repeat loops. The first grows Tofu a little ten times; the second shrinks Tofu by the same amount.
 
+![Tofu sprite](images/sprite-tofu.png)
+
 ```blocks3
 repeat (4)
 repeat (10)

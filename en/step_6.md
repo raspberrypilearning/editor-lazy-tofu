@@ -10,6 +10,8 @@ When the game starts, hide the original tree and place it just below the left ba
 
 Inside a `forever`{:class="block3control"} loop, create a clone, then wait `3` seconds before making the next one.
 
+![tree-left sprite](images/sprite-tree-left.png)
+
 ```blocks3
 when I receive [start v]
 hide
@@ -23,6 +25,8 @@ end
 ## Step 2
 
 The clones inherit the original sprite's hidden state. Give them their own script to make them visible.
+
+![tree-left sprite](images/sprite-tree-left.png)
 
 ```blocks3
 when I start as a clone

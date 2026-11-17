@@ -6,6 +6,8 @@ Click on the `Stage`. At the end of its green-flag setup script, set the volume 
 
 Inside the loop, use `play sound (Flowers Passing By) until done`{:class="block3sound"}. Waiting for the track to finish lets it repeat from the beginning.
 
+![Stage thumbnail](images/sprite-stage.png)
+
 ```blocks3
 when green flag clicked
 set [speed v] to (1)
