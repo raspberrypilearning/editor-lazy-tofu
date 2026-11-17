@@ -4,7 +4,7 @@ Tofu will stay near the middle of the screen while trees and other objects move 
 
 ## Step 1
 
-Click on the `Stage` and create a variable called `speed`{:class="block3variables"}, **For all sprites**. Untick its checkbox for now.
+Create a variable called `speed`{:class="block3variables"}, **For all sprites**. Untick its checkbox for now.
 
 Set it to `1` when the green flag is clicked.
 
@@ -20,7 +20,7 @@ broadcast (start v)
 
 ## Step 2
 
-Click on `Tofu`{:class="block3looks"}. At the top of the movement loop, replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"}.
+At the top of the movement loop, replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"}.
 
 ![Tofu sprite](images/sprite-tofu.png)
 

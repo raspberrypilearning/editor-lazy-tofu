@@ -6,8 +6,6 @@ The other bank needs the same tree behaviour. Reuse the code you've made.
 
 Click on `tree-left`{:class="block3looks"}. Drag each of its **two complete scripts**, by its top block, onto the existing `tree-right`{:class="block3looks"} sprite in the sprite list. This copies the scripts across.
 
-Click on `tree-right`{:class="block3looks"} to see its copies. The right-hand sprite already has the overhanging-tree artwork facing into the river.
-
 ## Step 2
 
 In its `go to x: () y: ()`{:class="block3motion"} block, change x from `-180` to `180`.

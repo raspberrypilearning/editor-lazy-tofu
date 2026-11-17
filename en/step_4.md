@@ -2,8 +2,6 @@
 
 Make each swimming stroke sound like a little plunge, with a small change in size to give it movement.
 
-Click on the `Tofu`{:class="block3looks"} sprite.
-
 ## Step 1
 
 In each arrow-key section, add `start sound (Plunge)`{:class="block3sound"} just after the costume change.

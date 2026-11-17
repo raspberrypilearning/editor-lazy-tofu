@@ -2,8 +2,6 @@
 
 The ripple sprite has two costumes facing opposite ways. Choose one to match the side of the river where each clone appears.
 
-Click on `water-ripples`{:class="block3looks"}.
-
 In the clone script, replace the single costume block with an `if then else`{:class="block3control"} block.
 
 If x is less than `0`, the clone is on the left: choose `water-ripples2`. Otherwise, choose `water-ripples`.

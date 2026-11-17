@@ -2,7 +2,7 @@
 
 Finish the opening with a splash as Tofu lands in the water.
 
-On `Tofu`{:class="block3looks"}, add `start sound (Splash)`{:class="block3sound"}, switch to the `splash` costume, then wait `1` second.
+Add `start sound (Splash)`{:class="block3sound"}, switch to the `splash` costume, then wait `1` second.
 
 Place these blocks after the last glide and before the `start` broadcast.
 

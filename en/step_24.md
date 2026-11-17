@@ -2,7 +2,7 @@
 
 Make Tofu grow and shrink gently for four breaths before waiting to wake up.
 
-On `Tofu`{:class="block3looks"}, add a `repeat (4)`{:class="block3control"} loop immediately before the opening script's `wait until`{:class="block3control"} block.
+Add a `repeat (4)`{:class="block3control"} loop immediately before the opening script's `wait until`{:class="block3control"} block.
 
 Inside it, add two repeat loops. The first grows Tofu a little ten times; the second shrinks Tofu by the same amount.
 

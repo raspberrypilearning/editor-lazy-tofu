@@ -2,7 +2,7 @@
 
 Use the same clone pattern for smaller plants. These will appear more often, at slightly different positions along the bank.
 
-Click on `tree-left`{:class="block3looks"} and copy its two scripts to `grass-left`{:class="block3looks"}. Then click on `grass-left`{:class="block3looks"} to edit the copies.
+Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class="block3looks"}.
 
 ## Step 1
 

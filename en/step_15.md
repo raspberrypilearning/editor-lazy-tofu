@@ -2,9 +2,7 @@
 
 Give Tofu some things to find in the river.
 
-Click on `water-ripples`{:class="block3looks"}. Copy its generator script and its movement script to `objects`{:class="block3looks"}. Leave the size-changing script behind for now.
-
-Click on `objects`{:class="block3looks"}.
+Copy the generator and movement scripts from `water-ripples`{:class="block3looks"} to `objects`{:class="block3looks"}. Leave the size-changing script behind for now.
 
 ## Step 1
 

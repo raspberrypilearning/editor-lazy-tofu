@@ -2,7 +2,7 @@
 
 Play some quiet music while Tofu sleeps and swims.
 
-Click on the `Stage`. At the end of its green-flag setup script, set the volume to `10%`, then add a forever loop.
+At the end of the green-flag setup script, set the volume to `10%`, then add a forever loop.
 
 Inside the loop, use `play sound (Flowers Passing By) until done`{:class="block3sound"}. Waiting for the track to finish lets it repeat from the beginning.
 
