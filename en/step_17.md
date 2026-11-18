@@ -21,10 +21,6 @@ end
 end
 ```
 
-Checking whether Tofu touches the sprite also checks its clones, so one condition covers every left-bank tree.
-
-## Now run your code
-
 Click the green flag and steer into a tree on the left. Tofu returns to the middle and loses one health.
 
 ## Step 2

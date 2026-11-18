@@ -1,28 +1,25 @@
-## Add river music
+## Make a splash
 
-Play some quiet music while Tofu sleeps and swims.
+Finish the opening with a splash as Tofu lands in the water.
 
-At the end of the green-flag setup script, set the volume to `10%`, then add a forever loop.
+Add `start sound (Splash)`{:class="block3sound"}, switch to the `splash` costume, then wait `1` second.
 
-Inside the loop, use `play sound (Flowers Passing By) until done`{:class="block3sound"}. Waiting for the track to finish lets it repeat from the beginning.
+Place these blocks after the last glide and before the `start` broadcast.
 
-![Stage thumbnail](images/sprite-stage.png)
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-when green flag clicked
-set [speed v] to (1)
-set [score v] to (0)
-set [health v] to (3)
-set volume to (10) %
-forever
-play sound (Flowers Passing By v) until done
-end
+glide (0.2) secs to x: (0) y: (0)
+start sound (Splash v)
+switch costume to (splash v)
+wait (1) seconds
+broadcast (start v)
 ```
 
-The Stage's volume setting affects its sounds. Tofu and the objects keep their own sound volumes.
+The movement script chooses Tofu's next costume once it receives `start`.
 
 ## Now run your code
 
-Click the green flag. Quiet music plays during the nap and continues into the game.
+Click the green flag and watch the full opening. After Tofu's four breaths, press space to wake up. Wait for the splash to finish before swimming for food.
 
-When health runs out, the existing `stop all`{:class="block3control"} block stops the music too.
+Try restarting during the animation too. Tofu should return to the sleeping position and size.
