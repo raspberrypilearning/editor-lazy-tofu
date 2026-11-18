@@ -1,21 +1,11 @@
-## Choose your river speed
+## Make it your own
 
-Give the player a slider to change how fast the river passes.
+Your river game is complete. Choose something you'd like to change or add.
 
-Tick the checkbox beside `speed`{:class="block3variables"} to show it.
+- Change how many points food is worth, or how much health Tofu starts with. How does that affect a game at your favourite river speed?
+- Design more food or rubbish costumes. Update the random costume range and the food-number check to match the new order.
+- Use the supplied `tofu-hurt` costume to give Tofu a reaction after a collision. How will you let the player see it before the movement script chooses another costume?
+- Change the pauses or glide positions in the opening to give Tofu a different way of getting into the river.
+- Keep a best score so the player has something to beat in the next game.
 
-![Stage thumbnail](images/sprite-stage.png)
-
-Right-click its display on the Stage and choose **slider**. Right-click it again and choose **change slider range**. Set the minimum to `1` and the maximum to `20`.
-
-Keep the minimum above zero: your clone generators divide their waits by speed, so zero would not give them a usable interval.
-
-Drag the display to a clear space at the top of the Stage.
-
-## Now run your code
-
-Click the green flag and wake Tofu. Start at speed `1`, then move the slider up a little.
-
-The plants, ripples and objects all move faster. Their generators make clones more often too, because their waits are divided by the same speed.
-
-Try to collect food without losing all your health. Clicking the green flag returns the speed to `1` for a new game.
+You don't need to try every idea. Pick one, test it, and see where it takes your game.

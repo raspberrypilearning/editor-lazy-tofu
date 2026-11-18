@@ -1,17 +1,15 @@
-## Crash into a tree
+## Check both banks
 
-Make the trees into obstacles. A collision will send Tofu back to the middle and cost one health.
+The right-bank trees need the same collision response.
 
-Add a new script for the `start` message.
-
-Inside a forever loop, check whether Tofu is touching `tree-left`. If so, start the `Scream1` sound, go to the middle of the river and change health by `-1`.
+Use an `or`{:class="block3operators"} block to join two touching checks: one for `tree-left` and one for `tree-right`.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 when I receive [start v]
 forever
-if <touching (tree-left v)?> then
+if <<touching (tree-left v)?> or <touching (tree-right v)?>> then
 start sound (Scream1 v)
 go to x: (0) y: (0)
 change [health v] by (-1)
@@ -19,8 +17,8 @@ end
 end
 ```
 
-Checking whether Tofu touches the sprite also checks its clones, so one condition covers every left-bank tree.
+An `or` condition is true when either check is true, so you can share the response code.
 
 ## Now run your code
 
-Click the green flag and steer into a tree on the left. Tofu returns to the middle and loses one health.
+Click the green flag and try a tree on each bank. Both should send Tofu to the middle and take away one health.
