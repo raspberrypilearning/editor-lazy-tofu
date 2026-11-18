@@ -1,31 +1,26 @@
-## Dodge the rubbish
+## Crash into a tree
 
-Food is worth collecting, but rubbish should cost Tofu some health.
+Make the trees into obstacles. A collision will send Tofu back to the middle and cost one health.
 
-Replace the **inner** `if then`{:class="block3control"} block, which checks the costume number, with `if then else`{:class="block3control"}.
+Add a new script for the `start` message.
 
-Keep the food code in its first section. In `else`, change health by `-1`, start the `Scream1` sound and delete the clone.
+Inside a forever loop, check whether Tofu is touching `tree-left`. If so, start the `Scream1` sound, go to the middle of the river and change health by `-1`.
 
-![objects sprite](images/sprite-objects.png)
+![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-if <touching (Tofu v)?> then
-if <(costume [number v]) < (4)> then
-change [score v] by (5)
-start sound (Chomp v)
-delete this clone
-else
-change [health v] by (-1)
+when I receive [start v]
+forever
+if <touching (tree-left v)?> then
 start sound (Scream1 v)
-delete this clone
+go to x: (0) y: (0)
+change [health v] by (-1)
 end
 end
 ```
 
-The costume numbers `4`, `5` and `6` all go through `else`, so bottles, cans and crisp packets have the same effect.
+Checking whether Tofu touches the sprite also checks its clones, so one condition covers every left-bank tree.
 
 ## Now run your code
 
-Click the green flag and touch a piece of rubbish. It disappears and health drops by `1`.
-
-Try food too: it should still add points without taking health away.
+Click the green flag and steer into a tree on the left. Tofu returns to the middle and loses one health.
