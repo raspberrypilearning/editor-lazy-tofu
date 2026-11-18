@@ -1,8 +1,8 @@
 # English project content
 
-- `meta.yml`: project metadata and the ordered list of 29 learner pages.
+- `meta.yml`: project metadata and the ordered list of 28 learner pages.
 - `landing.md`: introduction shown before the build instructions.
-- `step_1.md` to `step_29.md`: short build-and-test pages using `blocks3` code examples.
+- `step_1.md` to `step_28.md`: short build-and-test pages using `blocks3` code examples.
 - `code/editor-lazy-tofu-starter/`: Mark's supplied Code Club Editor starter, with all assets and no blocks.
 - `code/editor-lazy-tofu-complete/`: completed project matching the tutorial.
 - `resources/editor-lazy-tofu-starter.sb3`: offline starter download.

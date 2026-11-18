@@ -2,7 +2,7 @@
 
 Play some quiet music while Tofu swims.
 
-In the green-flag setup script, add `set volume to (10) %`{:class="block3sound"} before `broadcast (start)`{:class="block3events"}, then add a `forever`{:class="block3control"} loop after the broadcast.
+In the green-flag setup script, add `set volume to (10) %`{:class="block3sound"} after `broadcast (start)`{:class="block3events"}, then add a `forever`{:class="block3control"} loop after the broadcast.
 
 Inside the loop, use `play sound (Flowers Passing By) until done`{:class="block3sound"}. Waiting for the track to finish lets it repeat from the beginning.
 

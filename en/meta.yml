@@ -37,7 +37,4 @@ steps:
   - title: Choose your river speed
     completion:
       - internal
-  - title: Make it your own
-    challenge: true
-    completion:
       - external
