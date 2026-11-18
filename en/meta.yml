@@ -31,7 +31,6 @@ steps:
   - title: Wake up and wave
   - title: Waddle towards the river
   - title: Jump into the water
-  - title: Make a splash
   - title: Make the space bar squeak
   - title: Choose your river speed
     completion:
