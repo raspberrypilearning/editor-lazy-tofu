@@ -4,13 +4,13 @@ The ripple sprite has two costumes facing opposite ways. Choose one to match the
 
 In the clone script, replace the single costume block with an `if then else`{:class="block3control"} block.
 
-If x is less than `0`, the clone is on the left: choose `water-ripples2`. Otherwise, choose `water-ripples`.
+If `x position`{:class="block3motion"} is `less than 0`{:class="block3operators"}, the clone is on the left: choose `water-ripples2`{:class="block3looks"}. Otherwise, choose `water-ripples`{:class="block3looks"}.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 
 ```blocks3
 when I start as a clone
-if <(x position) < (0)> then
++if <(x position) < (0)> then
 switch costume to (water-ripples2 v)
 else
 switch costume to (water-ripples v)

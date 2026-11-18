@@ -1,38 +1,31 @@
-## Collect food
+## Dodge the rubbish
 
-Make each food clone check whether Tofu has reached it.
+Food is worth collecting, but rubbish should cost Tofu some health.
 
-Find the movement script.
+Replace the **inner** `if then`{:class="block3control"} block, which checks the costume number, with `if then else`{:class="block3control"}.
 
-Inside `repeat until`{:class="block3control"}, after the y change, add an `if then`{:class="block3control"} block that checks `touching (Tofu)`{:class="block3sensing"}.
-
-Inside that, add another `if then`{:class="block3control"} block. Check whether `costume number`{:class="block3looks"} is less than `4`.
-
-The first three costumes are food. When one touches Tofu, add `5` to the score, start the `Chomp` sound and delete the clone.
+Keep the food code in its first section. In `else`, change health by `-1`, start the `Scream1` sound and delete the clone.
 
 ![objects sprite](images/sprite-objects.png)
 
 ```blocks3
-when I start as a clone
-switch costume to (pick random (1) to (6))
-show
-repeat until <(y position) > (180)>
-change y by (speed)
 if <touching (Tofu v)?> then
 if <(costume [number v]) < (4)> then
 change [score v] by (5)
 start sound (Chomp v)
 delete this clone
-end
-end
-end
+else
+change [health v] by (-1)
+start sound (Scream1 v)
 delete this clone
+end
+end
 ```
 
-Keep the last `delete this clone`{:class="block3control"} block outside the loop: it still removes objects that reach the top without being collected.
+The costume numbers `4`, `5` and `6` all go through `else`, so bottles, cans and crisp packets have the same effect.
 
 ## Now run your code
 
-Click the green flag and swim into a shrimp, snail or worm. The food disappears and your score goes up by `5`.
+Click the green flag and touch a piece of rubbish. It disappears and health drops by `1`.
 
-Rubbish still floats past for now; you'll make it cost health next.
+Try food too: it should still add points without taking health away.

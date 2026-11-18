@@ -4,7 +4,7 @@ Give the water a little movement of its own by making each ripple grow and shrin
 
 Add a **second** `when I start as a clone`{:class="block3control"} script.
 
-Inside a forever loop, increase the size by `5`, wait `0.1` seconds, then decrease it by `5` and wait again.
+Inside a `forever`{:class="block3control"} loop, add `change size by (5)`{:class="block3looks"}, `wait (0.1) seconds`{:class="block3control"}, `change size by (-5)`{:class="block3looks"} and another `wait (0.1) seconds`{:class="block3control"}.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 
