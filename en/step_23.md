@@ -15,12 +15,12 @@ wait (0.5) seconds
 +switch costume to (tofu-running v)
 +set rotation style [all around v]
 +repeat (3)
-+change y by (-10)
-+turn ccw (15) degrees
-+wait (0.2) seconds
-+change y by (-10)
-+turn cw (15) degrees
-+wait (0.2) seconds
+change y by (-10)
+turn ccw (15) degrees
+wait (0.2) seconds
+change y by (-10)
+turn cw (15) degrees
+wait (0.2) seconds
 end
 go to x: (0) y: (0)
 ```
