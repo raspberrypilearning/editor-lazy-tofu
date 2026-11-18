@@ -26,13 +26,11 @@ broadcast (start v)
 
 Make each food clone check whether Tofu has reached it.
 
-Find the movement script.
+Click on the **objects** sprite and find the movement script.
 
-Inside `repeat until`{:class="block3control"}, after the y change, add an `if then`{:class="block3control"} block that checks `touching (Tofu)`{:class="block3sensing"}.
+Inside `repeat until`{:class="block3control"}, check if the sprite is `touching (Tofu)`{:class="block3sensing"}. If it is touching Tofu, check whether `costume number`{:class="block3looks"} is `less than 4`{:class="block3operators"}.
 
-Inside that, add another `if then`{:class="block3control"} block. Check whether `costume number`{:class="block3looks"} is `less than 4`{:class="block3operators"}.
-
-The first three costumes are food. When one touches Tofu, add `5`{:class="block3variables"} to `score`{:class="block3variables"}, start the `Chomp`{:class="block3sound"} sound and `delete this clone`{:class="block3control"}.
+The first three costumes are food. When one touches Tofu, increase the `score`{:class="block3variables"}, start the `Chomp`{:class="block3sound"} sound and `delete this clone`{:class="block3control"}.
 
 ![objects sprite](images/sprite-objects.png)
 
