@@ -2,7 +2,7 @@
 
 The game works. Now add Tofu's sleeping animation on the bank before the swimming begins.
 
-The `start` message already starts the movement, scenery and collision checks. You'll have Tofu send it after waking, instead of the Stage sending it straight away.
+The `start`{:class="block3events"} message already starts the movement, scenery and collision checks. You'll have Tofu send it after waking, instead of the Stage sending it straight away.
 
 ## Step 1
 
@@ -25,9 +25,9 @@ end
 
 Add a new `when green flag clicked`{:class="block3events"} script.
 
-Set the position to `x: -197, y: 107`, the size to `23%`, the direction to `90` and the rotation style to `left-right`. Show Tofu and switch to the `tofu-sleeping` costume.
+Set the position to `x: -197, y: 107`{:class="block3motion"}, the size to `23%`{:class="block3looks"}, the direction to `90`{:class="block3motion"} and the rotation style to `left-right`{:class="block3motion"}. `Show`{:class="block3looks"} Tofu and switch to the `tofu-sleeping`{:class="block3looks"} costume.
 
-At the end, wait until the space key is pressed, go to `0, 0`, then broadcast `start`.
+At the end, add `wait until`{:class="block3control"} with `key (space) pressed?`{:class="block3sensing"}, `go to x: (0) y: (0)`{:class="block3motion"} and `broadcast (start)`{:class="block3events"}.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
@@ -43,8 +43,6 @@ wait until <key (space v) pressed?>
 go to x: (0) y: (0)
 broadcast (start v)
 ```
-
-Keep both of Tofu's existing `when I receive (start)`{:class="block3events"} scripts. The game will use them once Tofu is in the river.
 
 ## Now run your code
 

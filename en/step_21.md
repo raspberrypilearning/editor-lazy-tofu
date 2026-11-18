@@ -2,29 +2,45 @@
 
 Make Tofu grow and shrink gently for four breaths before waiting to wake up.
 
+## Step 1
+
 Add a `repeat (4)`{:class="block3control"} loop immediately before the opening script's `wait until`{:class="block3control"} block.
 
-Inside it, add two repeat loops. The first grows Tofu a little ten times; the second shrinks Tofu by the same amount.
+![Tofu sprite](images/sprite-tofu.png)
+
+```blocks3
+when green flag clicked
+go to x: (-197) y: (107)
+set size to (23) %
+point in direction (90)
+set rotation style [left-right v]
+show
+switch costume to (tofu-sleeping v)
++repeat (4)
+end
+wait until <key (space v) pressed?>
+go to x: (0) y: (0)
+broadcast (start v)
+```
+
+## Step 2
+
+Inside `repeat (4)`{:class="block3control"}, add two `repeat (10)`{:class="block3control"} loops to grow and shrink Tofu.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 repeat (4)
-repeat (10)
++repeat (10)
 wait (0.04) seconds
 change size by (1)
 end
-repeat (10)
++repeat (10)
 wait (0.04) seconds
 change size by (-1)
 end
 end
-wait until <key (space v) pressed?>
 ```
-
-Keep `wait until <key (space) pressed?>`{:class="block3control"} **outside and after** the outer loop. The `go to x: (0) y: (0)`{:class="block3motion"} and `broadcast (start)`{:class="block3events"} blocks stay after the wait.
-
-The size goes up by ten and down by ten during each breath. Tofu finishes all four breaths, then waits for the player to press space.
 
 ## Now run your code
 
