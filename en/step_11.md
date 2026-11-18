@@ -2,13 +2,15 @@
 
 Moving ripples will make the water look as though it's flowing too.
 
-Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}.
-
 ## Step 1
 
-In the generator, change the random x range to `-180`–`180`. This puts the clones in the water between the banks.
+Copy both scripts from `grass-left`{:class="block3looks"} to `water-ripples`{:class="block3looks"}.
 
-Change the wait to a random number from `1` to `2`, divided by `speed`{:class="block3variables"}.
+## Step 2
+
+In the `when I receive (start)`{:class="block3events"} script, change the random x range to `-180 to 180`{:class="block3operators"}. This puts the clones in the water between the banks.
+
+Change the wait to `pick random (1) to (2)`{:class="block3operators"} divided by `speed`{:class="block3variables"}.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 
@@ -23,9 +25,9 @@ wait ((pick random (1) to (2)) / (speed)) seconds
 end
 ```
 
-## Step 2
+## Step 3
 
-In the clone script, replace the random costume choice with `water-ripples`. Change the y limit to `180`.
+In the clone script, replace the random costume choice with `water-ripples`{:class="block3looks"}.
 
 ![water-ripples sprite](images/sprite-water-ripples.png)
 

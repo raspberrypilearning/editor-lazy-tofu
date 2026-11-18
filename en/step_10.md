@@ -8,9 +8,9 @@ Click on `grass-left`{:class="block3looks"} and drag both complete scripts onto 
 
 ## Step 2
 
-In the `go to x: () y: ()`{:class="block3motion"} block, change the random x range from `-220`–`-180` to `180`–`220`.
+In the `go to x: () y: ()`{:class="block3motion"} block, change the random x range from `-220–-180`{:class="block3operators"} to `180–220`{:class="block3operators"}.
 
-Those positive x positions place the plants on the right bank. Keep y at `-200`, so they enter from the bottom just like the left-hand plants.
+Those positive x positions place the plants on the right bank. Keep y at `-200`{:class="block3motion"}, so they enter from the bottom just like the left-hand plants.
 
 ![grass-right sprite](images/sprite-grass-right.png)
 
