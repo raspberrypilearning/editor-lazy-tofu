@@ -2,15 +2,13 @@
 
 Use the same clone pattern for smaller plants. These will appear more often, at slightly different positions along the bank.
 
-Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class="block3looks"}.
-
 ## Step 1
 
-In the generator script, add `go to back layer`{:class="block3looks"} after `hide`{:class="block3looks"}.
+Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class="block3looks"}.
 
-Move the `go to x: () y: ()`{:class="block3motion"} block **inside** the forever loop, before making the clone. Set x to `pick random (-220) to (-180)`{:class="block3operators"} and y to `-200`{:class="block3motion"}.
+## Step 2
 
-Change the wait to `0.5` divided by `speed`{:class="block3variables"}.
+Edit the `when I receive (start)`{:class="block3events"} script to give each plant a random `x`{:class="block3motion"} position and increase the number of plants.
 
 ![grass-left sprite](images/sprite-grass-left.png)
 
@@ -25,9 +23,7 @@ wait ((0.5) / (speed)) seconds
 end
 ```
 
-Choosing the position inside the loop gives each new plant its own spot.
-
-## Step 2
+## Step 3
 
 The grass sprite has four costumes. In its clone script, change the random costume range to `1`–`4`.
 
