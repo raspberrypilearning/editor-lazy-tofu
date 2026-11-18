@@ -1,23 +1,25 @@
-## Jump into the water
+## Make a splash
 
-Replace the instant move into the river with a short jump.
+Finish the opening with a splash as Tofu lands in the water.
 
-Find the `go to x: (0) y: (0)`{:class="block3motion"} block at the end of the opening script. Replace that block with this sequence.
+Add `start sound (Splash)`{:class="block3sound"}, switch to the `splash` costume, then wait `1` second.
 
-Switch to `tofu-jumping`, return to `left-right` rotation, then glide through three positions to reach the middle of the river.
+Place these blocks after the last glide and before the `start` broadcast.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-switch costume to (tofu-jumping v)
-set rotation style [left-right v]
-glide (0.2) secs to x: (-149) y: (82)
-glide (0.2) secs to x: (-62) y: (69)
 glide (0.2) secs to x: (0) y: (0)
+start sound (Splash v)
+switch costume to (splash v)
+wait (1) seconds
+broadcast (start v)
 ```
 
-Keep `broadcast (start)`{:class="block3events"} after the final glide. Tofu must reach the water before the game starts.
+The movement script chooses Tofu's next costume once it receives `start`.
 
 ## Now run your code
 
-Click the green flag, wait for the four breaths, then press space. Tofu wakes, waves, waddles and jumps into the river. The arrow keys work once the jump finishes.
+Click the green flag and watch the full opening. After Tofu's four breaths, press space to wake up. Wait for the splash to finish before swimming for food.
+
+Try restarting during the animation too. Tofu should return to the sleeping position and size.
