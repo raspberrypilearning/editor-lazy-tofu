@@ -1,30 +1,23 @@
-## Waddle towards the river
+## Jump into the water
 
-Make Tofu waddle down the bank before jumping in.
+Replace the instant move into the river with a short jump.
 
-Add these blocks after the wave sequence, before the final position change.
+Find the `go to x: (0) y: (0)`{:class="block3motion"} block at the end of the opening script. Replace that block with this sequence.
 
-Switch to `tofu-running` and set the rotation style to `all around` so Tofu can lean from side to side.
-
-Repeat a pair of steps three times: move down, lean left, wait, then move down, lean right and wait again.
+Switch to `tofu-jumping`, return to `left-right` rotation, then glide through three positions to reach the middle of the river.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-switch costume to (tofu-running v)
-set rotation style [all around v]
-repeat (3)
-change y by (-10)
-turn ccw (15) degrees
-wait (0.2) seconds
-change y by (-10)
-turn cw (15) degrees
-wait (0.2) seconds
-end
+switch costume to (tofu-jumping v)
+set rotation style [left-right v]
+glide (0.2) secs to x: (-149) y: (82)
+glide (0.2) secs to x: (-62) y: (69)
+glide (0.2) secs to x: (0) y: (0)
 ```
 
-The two turns balance each other, just as the two size changes did in the breathing animation.
+Keep `broadcast (start)`{:class="block3events"} after the final glide. Tofu must reach the water before the game starts.
 
 ## Now run your code
 
-Click the green flag, wait for the four breaths, then press space. Tofu waves, waddles down the bank, then appears in the river to begin swimming.
+Click the green flag, wait for the four breaths, then press space. Tofu wakes, waves, waddles and jumps into the river. The arrow keys work once the jump finishes.
