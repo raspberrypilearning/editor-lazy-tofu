@@ -1,21 +1,25 @@
 ## Choose your river speed
 
-Give the player a slider to change how fast the river passes.
-
-Tick the checkbox beside `speed`{:class="block3variables"} to show it.
+Show `speed`{:class="block3variables"} by ticking its checkbox.
 
 ![Stage thumbnail](images/sprite-stage.png)
 
-Right-click its display on the Stage and choose **slider**. Right-click it again and choose **change slider range**. Set the minimum to `1` and the maximum to `20`.
+Right-click its display and choose **slider**. Right-click again, choose **change slider range**, and set it from `1`{:class="block3variables"} to `20`{:class="block3variables"}.
 
-Keep the minimum above zero: your clone generators divide their waits by speed, so zero would not give them a usable interval.
+Keep the minimum above zero because the clone scripts divide their waits by `speed`{:class="block3variables"}.
 
-Drag the display to a clear space at the top of the Stage.
+Drag the slider to the top of the Stage.
 
 ## Now run your code
 
-Click the green flag and wake Tofu. Start at speed `1`, then move the slider up a little.
+Click the green flag, wake Tofu and try the slider. The scenery moves faster and clones appear more often as `speed`{:class="block3variables"} increases.
 
-The plants, ripples and objects all move faster. Their generators make clones more often too, because their waits are divided by the same speed.
+## Make it your own
 
-Try to collect food without losing all your health. Clicking the green flag returns the speed to `1` for a new game.
+Choose an idea, change it and test your game:
+
+- Change the food points or starting `health`{:class="block3variables"}.
+- Add food or rubbish costumes, then update the random costume range and food-number check.
+- Use `tofu-hurt`{:class="block3looks"} after a collision.
+- Change the opening animation's waits or glides.
+- Keep a best `score`{:class="block3variables"} to beat next time.
