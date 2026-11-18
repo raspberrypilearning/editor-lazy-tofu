@@ -1,6 +1,6 @@
 ## Set up score and health
 
-Set up score and health, then make objects disappear when Tofu touches them.
+Set up score and health, then make objects disappear when **Tofu** touches them.
 
 ## Step 1
 
@@ -45,4 +45,4 @@ delete this clone
 
 ## Now run your code
 
-Click the green flag and swim into food and rubbish. Each clone disappears when it touches Tofu.
+Click the green flag and swim into food and rubbish. Each clone disappears when it touches **Tofu**.

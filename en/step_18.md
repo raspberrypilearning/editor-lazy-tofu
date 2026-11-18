@@ -1,6 +1,6 @@
 ## End the game
 
-Stop the game when Tofu runs out of health.
+Stop the game when **Tofu** runs out of health.
 
 Click on the **Stage**.
 
@@ -16,10 +16,10 @@ wait until <(health) < (1)>
 stop [all v]
 ```
 
-This script starts after the Stage has reset health, so it checks the current game.
+This script starts after the **Stage** has reset health, so it checks the current game.
 
 ## Now run your code
 
-Click the green flag and play until Tofu loses all three health points. Tofu, the plants, ripples and objects stop moving.
+Click the green flag and play until **Tofu** loses all three health points. **Tofu**, the plants, ripples and objects stop moving.
 
 Click the green flag again. Score and health reset for a new game.

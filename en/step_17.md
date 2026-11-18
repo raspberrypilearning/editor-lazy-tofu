@@ -1,6 +1,6 @@
 ## Crash into a tree
 
-Make the trees into obstacles. A collision will send Tofu back to the middle and cost one health.
+Make the trees into obstacles. A collision will send **Tofu** back to the middle and cost one health.
 
 ## Step 1
 
@@ -21,7 +21,7 @@ end
 end
 ```
 
-Click the green flag and steer into a tree on the left. Tofu returns to the middle and loses one health.
+Click the green flag and steer into a tree on the left. **Tofu** returns to the middle and loses one health.
 
 ## Step 2
 
@@ -46,4 +46,4 @@ An `or`{:class="block3operators"} condition is true when either check is true, s
 
 ## Now run your code
 
-Click the green flag and try a tree on each bank. Both should send Tofu to the middle and take away one health.
+Click the green flag and try a tree on each bank. Both should send **Tofu** to the middle and take away one health.

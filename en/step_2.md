@@ -1,6 +1,6 @@
 ## Swim both ways
 
-Give Tofu a way to swim back across the river, facing the direction of travel.
+Give **Tofu** a way to swim back across the river, facing the direction of travel.
 
 In the empty `else`{:class="block3control"} section, add an `if then else`{:class="block3control"} block that checks whether the right arrow key is pressed.
 
@@ -26,4 +26,4 @@ end
 
 ## Now run your code
 
-Click the green flag and try both arrow keys. Tofu faces the way you move.
+Click the green flag and try both arrow keys. **Tofu** faces the way you move.

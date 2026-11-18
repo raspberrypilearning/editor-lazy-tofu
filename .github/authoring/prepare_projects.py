@@ -115,6 +115,60 @@ def save_project(destination, project, assets):
             archive.writestr(entry, payload)
 
 
+def align_tutorial_scripts(project):
+    """Match the revised tree, collision and opening examples; safe to repeat."""
+    targets = {target["name"]: target for target in project["targets"]}
+    for name in ("tree-left", "tree-right"):
+        _, position = find_block(targets[name], "motion_gotoxy")
+        position["inputs"]["Y"] = [1, [4, "-300"]]
+        _, limit = find_block(targets[name], "operator_gt")
+        limit["inputs"]["OPERAND2"] = [1, [10, "220"]]
+
+    objects = targets["objects"]
+    blocks = objects["blocks"]
+    conditional_id, conditional = find_block(objects, "control_if_else")
+    # Move the food branch's deletion after the conditional and remove the
+    # rubbish branch's duplicate. Already-aligned projects need no rewiring.
+    after_id = conditional["next"]
+    if not after_id or blocks[after_id]["opcode"] != "control_delete_this_clone":
+        deletions = []
+        for branch in ("SUBSTACK", "SUBSTACK2"):
+            tail_id = conditional["inputs"][branch][1]
+            while blocks[tail_id]["next"]:
+                tail_id = blocks[tail_id]["next"]
+            tail = blocks[tail_id]
+            if tail["opcode"] != "control_delete_this_clone":
+                raise ValueError("Expected object branches to end in clone deletion")
+            blocks[tail["parent"]]["next"] = None
+            deletions.append(tail_id)
+        shared_id, duplicate_id = deletions
+        conditional["next"] = shared_id
+        blocks[shared_id]["parent"] = conditional_id
+        blocks[shared_id]["next"] = after_id
+        if after_id:
+            blocks[after_id]["parent"] = shared_id
+        del blocks[duplicate_id]
+
+    tofu = targets["Tofu"]
+    blocks = tofu["blocks"]
+    waddle_id, waddle = find_block(
+        tofu, "control_repeat",
+        lambda b: b["inputs"].get("TIMES") == [1, [6, "3"]],
+    )
+    jump_id = waddle["next"]
+    if blocks[jump_id]["opcode"] == "looks_switchcostumeto":
+        rotation_id = blocks[jump_id]["next"]
+        rotation = blocks[rotation_id]
+        if rotation["opcode"] != "motion_setrotationstyle" or rotation["fields"]["STYLE"][0] != "left-right":
+            raise ValueError("Expected left-right rotation before the jump")
+        glide_id = rotation["next"]
+        # Restore rotation at the end of the waddle, as introduced in step 23.
+        waddle["next"] = rotation_id
+        rotation["parent"], rotation["next"] = waddle_id, jump_id
+        blocks[jump_id]["parent"], blocks[jump_id]["next"] = rotation_id, glide_id
+        blocks[glide_id]["parent"] = jump_id
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("source", nargs="?", type=Path, default=COMPLETE)
@@ -185,6 +239,8 @@ def main():
         for block in targets[name]["blocks"].values():
             if block["opcode"] == "operator_gt" and block["inputs"]["OPERAND2"] == [1, [10, "190"]]:
                 block["inputs"]["OPERAND2"] = [1, [10, "180"]]
+
+    align_tutorial_scripts(project)
 
     for before, after in zip(original["targets"], project["targets"]):
         assert before["costumes"] == after["costumes"], before["name"]

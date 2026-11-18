@@ -1,6 +1,6 @@
 ## Add river music
 
-Play some quiet music while Tofu swims.
+Play some quiet music while **Tofu** swims.
 
 In the green-flag setup script, add `set volume to (10) %`{:class="block3sound"} after `broadcast (start)`{:class="block3events"}, then add a `forever`{:class="block3control"} loop after the broadcast.
 
@@ -20,10 +20,10 @@ play sound (Flowers Passing By v) until done
 end
 ```
 
-The Stage's volume setting affects its sounds. Tofu and the objects keep their own sound volumes.
+The **Stage**'s volume setting affects its sounds. **Tofu** and the objects keep their own sound volumes.
 
 ## Now run your code
 
-Click the green flag. Quiet music plays while Tofu swims.
+Click the green flag. Quiet music plays while **Tofu** swims.
 
 When health runs out, the existing `stop all`{:class="block3control"} block stops the music too.

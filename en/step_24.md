@@ -6,7 +6,7 @@ Replace the instant move into the river with a short jump.
 
 Find the `go to x: (0) y: (0)`{:class="block3motion"} block at the end of the opening script. Replace that block with this sequence.
 
-Add `switch costume to (tofu-jumping)`{:class="block3looks"}, `set rotation style (left-right)`{:class="block3motion"} and the three `glide`{:class="block3motion"} blocks shown below.
+Add `switch costume to (tofu-jumping)`{:class="block3looks"} and the three `glide`{:class="block3motion"} blocks shown below.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
@@ -19,8 +19,8 @@ change y by (-10)
 turn cw (15) degrees
 wait (0.2) seconds
 end
+set rotation style [left-right v]
 +switch costume to (tofu-jumping v)
-+set rotation style [left-right v]
 +glide (0.2) secs to x: (-149) y: (82)
 +glide (0.2) secs to x: (-62) y: (69)
 +glide (0.2) secs to x: (0) y: (0)
@@ -43,6 +43,6 @@ broadcast (start v)
 
 ## Now run your code
 
-Click the green flag, wait for the four breaths, then press space. Tofu wakes, waves, waddles, jumps and splashes. Try the arrow keys once the splash finishes.
+Click the green flag, wait for the four breaths, then press space. **Tofu** wakes, waves, waddles, jumps and splashes. Try the arrow keys once the splash finishes.
 
-Restart during the animation too. Tofu should return to the sleeping position and size.
+Restart during the animation too. **Tofu** should return to the sleeping position and size.

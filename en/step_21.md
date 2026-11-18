@@ -1,6 +1,6 @@
 ## Make sleeping Tofu breathe
 
-Make Tofu grow and shrink gently for four breaths before waiting to wake up.
+Make **Tofu** grow and shrink gently for four breaths before waiting to wake up.
 
 ## Step 1
 
@@ -28,7 +28,7 @@ broadcast (start v)
 
 ## Step 2
 
-Inside `repeat (4)`{:class="block3control"}, after `start sound (Snoring)`{:class="block3sound"}, add two `repeat (10)`{:class="block3control"} loops to grow and shrink Tofu.
+Inside `repeat (4)`{:class="block3control"}, after `start sound (Snoring)`{:class="block3sound"}, add two `repeat (10)`{:class="block3control"} loops to grow and shrink **Tofu**.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
@@ -48,4 +48,4 @@ end
 
 ## Now run your code
 
-Click the green flag. Tofu snores and takes four breaths, then waits for space to start swimming.
+Click the green flag. **Tofu** snores and takes four breaths, then waits for space to start swimming.

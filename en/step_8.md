@@ -4,7 +4,7 @@ The other bank needs the same tree behaviour. Reuse the code you've made.
 
 ## Step 1
 
-Click on `tree-left`{:class="block3looks"}. Drag each of its **two complete scripts**, by its top block, onto the existing `tree-right`{:class="block3looks"} sprite in the sprite list. This copies the scripts across.
+Click on **tree-left**. Drag each of its **two complete scripts**, by its top block, onto the existing **tree-right** sprite in the sprite list. This copies the scripts across.
 
 ![Drag each script from tree-left onto the tree-right sprite.](images/tree-script-copy.gif)
 
@@ -22,7 +22,7 @@ hide
 go to x: (180) y: (-300)
 ```
 
-Leave the clone script and the rest of the generator unchanged.
+Leave the clone script and the rest of the `when I receive (start)`{:class="block3events"} script unchanged.
 
 ## Now run your code
 
