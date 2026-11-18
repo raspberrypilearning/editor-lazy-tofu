@@ -1,25 +1,18 @@
-## Make a splash
+## Make the space bar squeak
 
-Finish the opening with a splash as Tofu lands in the water.
+Add a squeaky sound when the player presses space.
 
-Add `start sound (Splash)`{:class="block3sound"}, switch to the `splash` costume, then wait `1` second.
+Make a separate key-press script using the supplied `Squeaky Toy` sound.
 
-Place these blocks after the last glide and before the `start` broadcast.
-
-![Tofu sprite](images/sprite-tofu.png)
+![Stage thumbnail](images/sprite-stage.png)
 
 ```blocks3
-glide (0.2) secs to x: (0) y: (0)
-start sound (Splash v)
-switch costume to (splash v)
-wait (1) seconds
-broadcast (start v)
+when [space v] key pressed
+play sound (Squeaky Toy v) until done
 ```
 
-The movement script chooses Tofu's next costume once it receives `start`.
+This sound can run alongside Tofu's opening script and the background music.
 
 ## Now run your code
 
-Click the green flag and watch the full opening. After Tofu's four breaths, press space to wake up. Wait for the splash to finish before swimming for food.
-
-Try restarting during the animation too. Tofu should return to the sleeping position and size.
+Click the green flag, wait for the four breaths, then press space. The squeak plays as Tofu wakes. You can press space during the game too.
