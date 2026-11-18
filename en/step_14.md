@@ -1,10 +1,10 @@
 ## Float food and rubbish
 
-Give Tofu some things to find in the river.
+Give **Tofu** some things to find in the river.
 
 ## Step 1
 
-Copy all three scripts from `water-ripples`{:class="block3looks"} to `objects`{:class="block3looks"}.
+Copy all three scripts from **water-ripples** to **objects**.
 
 ## Step 2
 
@@ -42,4 +42,4 @@ end
 
 ## Now run your code
 
-Click the green flag. Food and rubbish bob as they float through the river. They don't affect Tofu yet.
+Click the green flag. Food and rubbish bob as they float through the river. They don't affect **Tofu** yet.

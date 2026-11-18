@@ -8,11 +8,11 @@ Right-click its display and choose **slider**. Right-click again, choose **chang
 
 Keep the minimum above zero because the clone scripts divide their waits by `speed`{:class="block3variables"}.
 
-Drag the slider to the top of the Stage.
+Drag the slider to the top of the **Stage**.
 
 ## Now run your code
 
-Click the green flag, wake Tofu and try the slider. The scenery moves faster and clones appear more often as `speed`{:class="block3variables"} increases.
+Click the green flag, wake **Tofu** and try the slider. The scenery moves faster and clones appear more often as `speed`{:class="block3variables"} increases.
 
 ## Make it your own
 

@@ -72,3 +72,12 @@ A focused Scratch VM logic check confirmed exactly 40 growth and 40 shrink chang
 Both guides use “add the sleeping animation” rather than “add the nap”. The current editor guide has 38 code examples; all parse without unrecognised blocks.
 
 The manual checks above remain before full learner acceptance.
+
+## Tutorial alignment — 18 November 2026
+
+- Step 23 now restores `left-right` rotation immediately after waddling. Step 24 retains that block when introducing the jump. Step 22 uses `blocks3`, consistent with the other examples; all 38 examples parse with scratchblocks 3.7.1.
+- Both completed archives now start trees at y `-300`, delete them above y `220`, and share one deletion after the food/rubbish conditional. The existing deletion after the movement loop is retained.
+- Both completed archives are byte-identical. Every costume, sound record and asset byte is unchanged. All block references and parent/next links were checked.
+- A focused execution check of the completed collision graph confirmed all three food costumes add five points and play Chomp, all three rubbish costumes remove one health and play Scream1, and each path deletes its clone once.
+- The offline starter is now byte-identical to the current code-folder starter, with Tofu at `0, 0` in the `tofu` costume. The code-folder starter itself is unchanged.
+- Rebuilding produces identical completed-project bytes. These checks do not replace a live editor playthrough or listening test.

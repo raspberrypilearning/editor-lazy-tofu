@@ -1,6 +1,6 @@
 ## Move the tree clones
 
-Tofu will stay near the middle of the screen while trees and other objects move past. A shared variable will keep their movement at the same speed.
+**Tofu** will stay near the middle of the screen while trees and other objects move past. A shared variable will keep their movement at the same speed.
 
 ## Step 1
 
@@ -22,7 +22,7 @@ broadcast (start v)
 
 ## Step 2
 
-Replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"} at the top of the Tofu movement loop and the tree-left clone generator.
+Replace `when green flag clicked`{:class="block3events"} with `when I receive (start)`{:class="block3events"} at the top of the **Tofu** movement script and the **tree-left** `when green flag clicked`{:class="block3events"} script.
 
 ![Tofu sprite](images/sprite-tofu.png) ![tree-left sprite](images/sprite-tree-left.png)
 
@@ -31,11 +31,11 @@ Replace `when green flag clicked`{:class="block3events"} with `when I receive (s
 +when I receive [start v]
 ```
 
-The Stage sets the speed before starting the movement and tree scripts.
+The **Stage** sets the speed before starting the movement and tree scripts.
 
 ## Step 3
 
-Make each tree travel up the screen so it looks like Tofu is moving.
+Make each tree travel up the screen so it looks like **Tofu** is moving.
 
 Find the `when I start as a clone`{:class="block3control"} script.
 
@@ -48,10 +48,10 @@ Stop repeating when the clone's y position is `greater than 220`{:class="block3o
 ```blocks3
 when I start as a clone
 show
-repeat until <(y position) > (220)>
++repeat until <(y position) > (220)>
 change y by (speed)
 end
-delete this clone
++delete this clone
 ```
 
 ## Now run your code

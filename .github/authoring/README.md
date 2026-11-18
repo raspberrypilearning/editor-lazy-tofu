@@ -32,6 +32,9 @@ The completed project keeps the source gameplay and animations, with these corre
 - Delete grass clones above y `180`, matching the other scenery, instead of `190`. At the supplied size, Scratch's sprite fencing stops grass reaching `190`, so the source can accumulate clones at the top edge.
 - Set the speed slider's minimum to `1`, because clone intervals divide by speed.
 - Write the water and object random x ranges in ascending order, `-180` to `180`. This chooses the same positions as the reversed ranges in the source.
+- Start trees at y `-300` and delete them above y `220`, matching the revised tutorial.
+- Use one shared clone-deletion block after the food/rubbish conditional, plus the existing deletion after the movement loop.
+- Restore `left-right` rotation immediately after the waddle loop, before the jump costume, matching its introduction in step 23.
 
 The unused `tofu-hurt` costume and duplicate sound assignments are retained. Costume order is preserved, including food in positions 1–3 and rubbish in positions 4–6.
 
@@ -50,6 +53,8 @@ python3 .github/authoring/prepare_projects.py --starter '/path/to/editor-lazy-to
 ```
 
 ## Tutorial sequence
+
+Use bold for sprite names in prose; retain Scratch block colours for block labels and costume names. Each page has one "Now run your code" section; intermediate tests do not repeat the heading.
 
 Refer to scripts by their starting block or visible behaviour; do not use the term "generator" in learner instructions.
 

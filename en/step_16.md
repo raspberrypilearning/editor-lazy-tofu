@@ -1,10 +1,10 @@
 ## Dodge the rubbish
 
-Food is worth collecting, but rubbish should cost Tofu some health.
+Food is worth collecting, but rubbish should cost **Tofu** some health.
 
 ## Step 1
 
-Inside the touching-Tofu check, add an `if then else`{:class="block3control"} block before `delete this clone`{:class="block3control"}.
+Inside the `touching (Tofu)`{:class="block3sensing"} check, add an `if then else`{:class="block3control"} block before `delete this clone`{:class="block3control"}.
 
 The first three costumes are food. If `costume number`{:class="block3looks"} is `less than 4`{:class="block3operators"}, add `change score by (5)`{:class="block3variables"} and `start sound (Chomp)`{:class="block3sound"}.
 
