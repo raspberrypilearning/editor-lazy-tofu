@@ -25,6 +25,7 @@ steps:
   - title: Dodge the rubbish
   - title: Crash into a tree
   - title: End the game
+  - title: Add river music
   - title: Let Tofu sleep
   - title: Make sleeping Tofu breathe
   - title: Add snoring
@@ -32,7 +33,6 @@ steps:
   - title: Waddle towards the river
   - title: Jump into the water
   - title: Make a splash
-  - title: Add river music
   - title: Make the space bar squeak
   - title: Choose your river speed
     completion:

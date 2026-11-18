@@ -2,9 +2,11 @@
 
 Stop the game when Tofu runs out of health.
 
+Click on the **Stage**.
+
 Add a new `when I receive (start)`{:class="block3events"} script.
 
-Use `wait until`{:class="block3control"} to wait for health to be less than `1`, then `stop all`{:class="block3control"}.
+Use `wait until`{:class="block3control"} to wait for `health`{:class="block3variables"} to be `less than 1`{:class="block3operators"}, then `stop all`{:class="block3control"}.
 
 ![Stage thumbnail](images/sprite-stage.png)
 

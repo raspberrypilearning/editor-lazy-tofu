@@ -1,30 +1,25 @@
-## Waddle towards the river
+## Wake up and wave
 
-Make Tofu waddle down the bank before jumping in.
+Let Tofu pause and wave before getting into the water.
 
-Add these blocks after the wave sequence, before the final position change.
+Add these blocks **after** `wait until <key (space) pressed?>`{:class="block3control"} and **before** `go to x: (0) y: (0)`{:class="block3motion"}.
 
-Switch to `tofu-running` and set the rotation style to `all around` so Tofu can lean from side to side.
-
-Repeat a pair of steps three times: move down, lean left, wait, then move down, lean right and wait again.
+Switch to `tofu`, wait a second, then start `Magic Spell` and switch to the waving costume. After half a second, return to `tofu` and wait another half a second.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
-switch costume to (tofu-running v)
-set rotation style [all around v]
-repeat (3)
-change y by (-10)
-turn ccw (15) degrees
-wait (0.2) seconds
-change y by (-10)
-turn cw (15) degrees
-wait (0.2) seconds
-end
+switch costume to (tofu v)
+wait (1) seconds
+start sound (Magic Spell v)
+switch costume to (tofu-waving v)
+wait (0.5) seconds
+switch costume to (tofu v)
+wait (0.5) seconds
 ```
 
-The two turns balance each other, just as the two size changes did in the breathing animation.
+Keep the position change and `broadcast (start)`{:class="block3events"} at the end. You'll replace the position change with a jump shortly.
 
 ## Now run your code
 
-Click the green flag, wait for the four breaths, then press space. Tofu waves, waddles down the bank, then appears in the river to begin swimming.
+Click the green flag, wait for the four breaths, then press space. Tofu wakes up, waves, then starts the game.
