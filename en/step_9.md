@@ -8,7 +8,7 @@ Copy both scripts from `tree-left`{:class="block3looks"} to `grass-left`{:class=
 
 ## Step 2
 
-Edit the `when I receive (start)`{:class="block3events"} script to give each plant a random `x`{:class="block3motion"} position and increase the number of plants.
+Edit the `when I receive (start)`{:class="block3events"} script to give each plant a random `x`{:class="block3motion"} position, increase the number of plants and make them appear behind the trees.
 
 ![grass-left sprite](images/sprite-grass-left.png)
 
@@ -25,7 +25,7 @@ end
 
 ## Step 3
 
-The grass sprite has four costumes. In its clone script, change the random costume range to `1`–`4`.
+The grass sprite has four costumes. In its clone script, change the random costume range to `1–4`{:class="block3operators"}.
 
 Change the y limit to `180`{:class="block3operators"}, so each plant deletes itself when it reaches the top.
 
