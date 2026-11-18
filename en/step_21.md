@@ -1,15 +1,14 @@
-## Make sleeping Tofu breathe
+## Add snoring
 
-Make Tofu grow and shrink gently for four breaths before waiting to wake up.
+Give sleeping Tofu a sound to go with the breathing.
 
-Add a `repeat (4)`{:class="block3control"} loop immediately before the opening script's `wait until`{:class="block3control"} block.
-
-Inside it, add two repeat loops. The first grows Tofu a little ten times; the second shrinks Tofu by the same amount.
+Add `start sound (Snoring)`{:class="block3sound"} at the beginning of the outer `repeat (4)`{:class="block3control"} loop, before the two breathing loops.
 
 ![Tofu sprite](images/sprite-tofu.png)
 
 ```blocks3
 repeat (4)
+start sound (Snoring v)
 repeat (10)
 wait (0.04) seconds
 change size by (1)
@@ -22,10 +21,8 @@ end
 wait until <key (space v) pressed?>
 ```
 
-Keep `wait until <key (space) pressed?>`{:class="block3control"} **outside and after** the outer loop. The `go to x: (0) y: (0)`{:class="block3motion"} and `broadcast (start)`{:class="block3events"} blocks stay after the wait.
-
-The size goes up by ten and down by ten during each breath. Tofu finishes all four breaths, then waits for the player to press space.
+Use `start sound`{:class="block3sound"} so the breathing animation can continue while the sound plays.
 
 ## Now run your code
 
-Click the green flag. Watch Tofu take four breaths, then press space to start swimming.
+Click the green flag. Tofu snores and breathes four times, then waits on the bank. Press space after the four breaths to wake up and play.

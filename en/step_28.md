@@ -1,18 +1,21 @@
-## Make the space bar squeak
+## Choose your river speed
 
-Add a squeaky sound when the player presses space.
+Give the player a slider to change how fast the river passes.
 
-Make a separate key-press script using the supplied `Squeaky Toy` sound.
+Tick the checkbox beside `speed`{:class="block3variables"} to show it.
 
 ![Stage thumbnail](images/sprite-stage.png)
 
-```blocks3
-when [space v] key pressed
-play sound (Squeaky Toy v) until done
-```
+Right-click its display on the Stage and choose **slider**. Right-click it again and choose **change slider range**. Set the minimum to `1` and the maximum to `20`.
 
-This sound can run alongside Tofu's opening script and the background music.
+Keep the minimum above zero: your clone generators divide their waits by speed, so zero would not give them a usable interval.
+
+Drag the display to a clear space at the top of the Stage.
 
 ## Now run your code
 
-Click the green flag, wait for the four breaths, then press space. The squeak plays as Tofu wakes. You can press space during the game too.
+Click the green flag and wake Tofu. Start at speed `1`, then move the slider up a little.
+
+The plants, ripples and objects all move faster. Their generators make clones more often too, because their waits are divided by the same speed.
+
+Try to collect food without losing all your health. Clicking the green flag returns the speed to `1` for a new game.
